@@ -1,0 +1,51 @@
+{
+  "project_id": "6176ddfa-d037-5193-9fb1-0d578a8337e2",
+  "schema": "kimmizo-v2-migration",
+  "schema_version": 1,
+  "v1_artifacts": [
+    {
+      "relative_path": ".kimmizo/capabilities/receipts/README.md",
+      "sha256": "b83ee90d471565f71447838a28ebcc63eb28129312b4bd12a78b5b8c6ddf0698"
+    },
+    {
+      "relative_path": ".kimmizo/manifest.json",
+      "sha256": "7da9e1c6b6c328e9979efeaf27c4704a9a528ed163ab8ad3e91ae454beccc507"
+    },
+    {
+      "relative_path": ".kimmizo/memory/current.md",
+      "sha256": "1c59316791f7b4b6f21f21ca9994de13266edd8c3d6de32989200d4d49144fdc"
+    },
+    {
+      "relative_path": ".kimmizo/runtime/checkpoints/latest.json",
+      "sha256": "b2bfaa3d1e80312069e5efe5890cb1e95f049b0557538df2171d5b1d2af2635a"
+    },
+    {
+      "relative_path": ".kimmizo/team/active.json",
+      "sha256": "43204efaf83113dd8949a43ffc2fca0b75cc4fbeba5874c432b17f5a32f6aff2"
+    },
+    {
+      "relative_path": ".kimmizo/team/identities.json",
+      "sha256": "a2c0e9bb507e6a6f673a8f6897074d66e21d6f2d8920a8f0f786a2c34662f882"
+    },
+    {
+      "relative_path": ".kimmizo/team/profiles/arin/v001.json",
+      "sha256": "21857c3aeab404484729576ddf9f317786c23f9aa9814253488f28ecd0a3057f"
+    },
+    {
+      "relative_path": ".kimmizo/team/profiles/mira/v001.json",
+      "sha256": "a283e209492778a3547e196815e9dba440d4491cd9ec81d837b1f4897c3d13c1"
+    },
+    {
+      "relative_path": ".kimmizo/team/profiles/nami/v001.json",
+      "sha256": "9895dd3ab089794eb78d1c303120d1603e495da482ebde1daa94dd2adecb780f"
+    },
+    {
+      "relative_path": ".kimmizo/team/profiles/vera/v001.json",
+      "sha256": "02e4fddd5bfaa902bad023d296363768d4b978f18542fe17bfda72d4e9ea55d6"
+    },
+    {
+      "relative_path": "AGENTS.md#user-content",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}

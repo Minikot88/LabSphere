@@ -1,0 +1,11 @@
+import {config} from 'dotenv';
+import {resolve} from 'node:path';
+import {existsSync} from 'node:fs';
+config({path:existsSync('.env')?'.env':resolve('../../.env'),quiet:true});
+const required=(key:string)=>{const v=process.env[key];if(!v)throw new Error(`Missing ${key}; run npm run setup:local`);return v;};
+export const root=existsSync('apps/api')?process.cwd():resolve('../..');
+const dbUrl=new URL(required('DATABASE_URL'));
+if(!['127.0.0.1','localhost'].includes(dbUrl.hostname)||!/^labsphere(?:_test)?$/.test(dbUrl.pathname.slice(1)))throw new Error('Local-only database guard rejected URL');
+export const cfg={dbUrl:dbUrl.toString(),secret:required('SESSION_SECRET'),webUrl:process.env.WEB_URL||'http://localhost:5173',port:Number(process.env.API_PORT||3001),storage:resolve(root,process.env.STORAGE_ROOT||'.local/private-files'),smtpHost:process.env.SMTP_HOST||'127.0.0.1',smtpPort:Number(process.env.SMTP_PORT||1025),smtpFrom:process.env.SMTP_FROM||'no-reply@labsphere.test'};
+if(cfg.secret.length<32)throw new Error('SESSION_SECRET must be at least 32 characters');
+if(!['localhost','127.0.0.1'].includes(cfg.smtpHost))throw new Error('Local build requires loopback SMTP');

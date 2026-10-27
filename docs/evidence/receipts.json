@@ -1,0 +1,37 @@
+[
+  {
+    "acceptance_item": "Local workflows and tenant integrity",
+    "check": "Vitest real PostgreSQL unit/integration",
+    "outcome": "passed",
+    "artifact": "docs/evidence/vitest.json",
+    "proof_state": "runtime_observed"
+  },
+  {
+    "acceptance_item": "Responsive browser workflows",
+    "check": "Playwright 1440x900, 768x1024, 390x844",
+    "outcome": "passed",
+    "artifact": "docs/evidence/playwright.json",
+    "proof_state": "runtime_observed"
+  },
+  {
+    "acceptance_item": "Invitations and three-lab authorization",
+    "check": "16 additional API checks",
+    "outcome": "passed",
+    "artifact": "docs/evidence/manual-workflows.json",
+    "proof_state": "runtime_observed"
+  },
+  {
+    "acceptance_item": "Development seed safety",
+    "check": "two repeat seeds with unchanged counts",
+    "outcome": "passed",
+    "artifact": "docs/evidence/seed-idempotency.json",
+    "proof_state": "runtime_observed"
+  },
+  {
+    "acceptance_item": "Local services available",
+    "check": "web/API/PostgreSQL/Mailpit health",
+    "outcome": "passed",
+    "artifact": "docs/evidence/local-health.json",
+    "proof_state": "runtime_observed"
+  }
+]

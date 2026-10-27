@@ -1,0 +1,25 @@
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import {pathToFileURL} from 'node:url';
+import {chromium} from '@playwright/test';
+import {screens} from '../apps/web/src/features/screens.ts';
+const source=path.resolve('LABSPHERE_COMPLETE_DESIGN_PACKAGE/LABSPHERE_ALL_PAGES_INTERACTIVE_DESIGN.html');
+const browser=await chromium.launch({headless:true});
+const page=await browser.newPage({viewport:{width:1440,height:900}});
+const errors=[];page.on('pageerror',e=>errors.push(e.message));
+await page.route('https://**',r=>r.abort());
+await page.goto(pathToFileURL(source).href);
+const registry=await page.evaluate('REG.flatMap(group=>group[1])');
+if(registry.length!==51||screens.length!==51)throw new Error('Expected exactly 51 design and application screen contracts');
+const contracts=[];
+for(const [id,title] of registry){await page.evaluate('go('+JSON.stringify(id)+')');contracts.push({id,title,...await page.evaluate(()=>({headings:[...document.querySelectorAll('h1,h2,h3')].map(e=>e.textContent.trim()),buttons:[...document.querySelectorAll('button')].map(e=>e.textContent.trim()).filter(Boolean),labels:[...document.querySelectorAll('label')].map(e=>e.textContent.trim()),tabs:[...document.querySelectorAll('[data-tab]')].map(e=>e.textContent.trim()),overflow:document.documentElement.scrollWidth>globalThis.innerWidth}))});}
+await browser.close();
+if(errors.length)throw new Error(errors.join('\n'));
+for(const s of screens)if(!contracts.some(c=>c.id===s.id))throw new Error('Missing design contract: '+s.id);
+await fs.mkdir('docs/evidence',{recursive:true});
+await fs.writeFile('docs/evidence/design-contracts.json',JSON.stringify({source,contracts,errors},null,2));
+const lines=['# LabSphere 51-screen gap analysis','','Baseline: existing PostgreSQL/API implementation before design integration. The static HTML is a visual reference with synthetic data, not application code.','', '| # | Screen | Application route | Baseline gap | Current data source |','|---|---|---|---|---|'];
+for(const [i,s] of screens.entries())lines.push(`| ${i+1} | ${s.id} — ${s.title} | ${s.path} | ${s.baseline} | ${s.group==='สถานะระบบ'?'Real error/recovery state':s.id==='screens'?'Static route metadata + scoped API records':s.group==='การเข้าถึงระบบ'?'Authentication API / PostgreSQL':s.platform?'Super Admin API / PostgreSQL (health: measured services)':'Scoped API / PostgreSQL'} |`);
+lines.push('','No mock business records or localStorage persistence are used. New implementation and test status are recorded separately in LABSPHERE-COMPLETE-IMPLEMENTATION-REPORT.md.','','Function-level changes: standalone creation forms; scoped context tabs and audit timelines; actual booking usage; equipment cards/table; hourly weekly calendar; candidate quota/availability preview; notification unread/all-read; user membership profile; platform lab lifecycle and aggregate counts; measured DB/storage/SMTP health; private-document default for future uploads; custody moves with immutable audit; validated integer pagination and additional search filters.','','Preserved core workflows: ledger receipts/reservations/dispense/return/count/transfer/waste; authorization and MFA; overlap/quota locking; training/calibration eligibility; safety stop, repair, verification/signoff; files, alerts, CSV reports and immutable audit.');
+await fs.writeFile('docs/LABSPHERE-GAP-ANALYSIS.md',lines.join('\n')+'\n');
+console.log('Design contracts: 51 / 51, render errors:',errors.length);

@@ -1,0 +1,48 @@
+{
+  "candidate": "labsphere-local-c3",
+  "attempt": "protected-review-3",
+  "assurance_unit": "local-master-build",
+  "call": 3,
+  "cap": 3,
+  "remaining": 0,
+  "state": "completed",
+  "freeze": "Full application frozen in candidate-c3.json",
+  "files": [
+    {
+      "path": "apps/api/src/modules/auth.ts",
+      "sha256": "521959d6b73364820bdb7e2cec65b51c56d88c5ff2c828344a6ec37c2661c304"
+    },
+    {
+      "path": "apps/api/src/modules/bookings.ts",
+      "sha256": "893d115b25a036d6dc61a122883a456c2dd5e2bfa3036ad7aaa47a090987ddaf"
+    },
+    {
+      "path": "apps/api/src/modules/inventory.ts",
+      "sha256": "3496862fbfbb3009a2eee7c8f56a3546d3a2ac38a726ac50ff968bf4c5d492e2"
+    },
+    {
+      "path": "apps/api/src/modules/operations.ts",
+      "sha256": "b62a601716fb9ddf67930ae4f728b47beb6ef1e492073f6494e685c4771e5c70"
+    },
+    {
+      "path": "apps/api/src/modules/safety.ts",
+      "sha256": "23b246aff229afe37ec07c420e11543cd51d5957c04c615311793488875486fb"
+    },
+    {
+      "path": "apps/api/src/security.ts",
+      "sha256": "528b4bc7667ad5cd32ff69a034dbf0cf51876cefa2bca8a9ded3720c1ebc8dd7"
+    }
+  ],
+  "evidence": [
+    "38 Vitest unit/integration tests passed",
+    "lint/typecheck/build passed",
+    "compiled Node starts; expanded E2E running"
+  ],
+  "priorVerdicts": [
+    "review-1 fix-first; five findings fixed",
+    "review-2 fix-first; two calibration findings fixed and regression-tested"
+  ],
+  "authority": "Local-only implementation/testing; no external action",
+  "verdict": "accept",
+  "scope": "Six core source files and reviewed corrections; final UI changes parent verified"
+}

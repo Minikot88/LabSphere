@@ -1,0 +1,47 @@
+{
+  "candidate": "labsphere-local-c1",
+  "state": "completed",
+  "assurance_unit": "local-master-build",
+  "authority": "local implementation and testing authorized; no external changes",
+  "evidence": [
+    "docs/evidence/vitest.json",
+    "docs/evidence/playwright.json",
+    "docs/evidence/npm-audit.json"
+  ],
+  "call": 1,
+  "files": [
+    {
+      "path": "apps/api/src/security.ts",
+      "sha256": "A2F0C767BC266669FF7B802D276E9125322308C9D70D182FC90F465BA7A9279A"
+    },
+    {
+      "path": "apps/api/src/modules/auth.ts",
+      "sha256": "0E87CBF9D6C6EB04C6DDF4893DC30CC884A4A34C132810D543854B54D380472A"
+    },
+    {
+      "path": "apps/api/src/modules/inventory.ts",
+      "sha256": "1FDE14E04A8C6519474553EDF7EDC0F7ABE322A90A4B86D9E7162CA1ACA468FD"
+    },
+    {
+      "path": "apps/api/src/modules/bookings.ts",
+      "sha256": "1DCC82CBAEEEB852D9FAFFC28E62AF7791CF48A89B7450D53362C73C0D21E1A6"
+    },
+    {
+      "path": "apps/api/src/modules/operations.ts",
+      "sha256": "62D891716464FF3FE6F1F87147A19D28F005349E02D500FFADF5CBA1C347CC84"
+    },
+    {
+      "path": "apps/api/src/modules/queries.ts",
+      "sha256": "CF866C7191FD508D6542AA8ED929B0FB43C5929BF9476A2A9F48907CD418C24B"
+    }
+  ],
+  "gaps": [
+    "mobile browser run pending",
+    "full master UX completeness needs final audit"
+  ],
+  "freeze": "source files frozen for read-only review",
+  "attempt": "protected-review-1",
+  "remaining": 2,
+  "cap": 3,
+  "verdict": "fix-first"
+}

@@ -1,0 +1,14 @@
+{
+  "checkedAt": "2026-10-27T03:20:02.604Z",
+  "manifestRevision": 5,
+  "sourceHashes": "PASS",
+  "report51Rows": "PASS",
+  "unitTests": 58,
+  "e2eScenarios": 6,
+  "secondaryChecks": 45,
+  "governanceChecks": 31,
+  "localApiStatus": 200,
+  "runtimeSession": 28598,
+  "typecheck": "PASS",
+  "lint": "PASS"
+}

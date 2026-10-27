@@ -1,0 +1,472 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+  moduleFormat = "esm"
+  importFileExtension = "ts"
+}
+datasource db {
+  provider = "postgresql"
+}
+model Organization {
+  id String @id @default(uuid()) @db.Uuid
+  code String @unique
+  name String
+  status String @default("ACTIVE")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+model Laboratory {
+  id String @id @default(uuid()) @db.Uuid
+  organizationId String @db.Uuid
+  code String
+  name String
+  building String @default("")
+  room String @default("")
+  timezone String @default("Asia/Bangkok")
+  status String @default("ACTIVE")
+  policies Json @default("{\"weeklyQuota\":3,\"checkinEarlyMinutes\":30,\"availableHoursPerDay\":8}")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@unique([organizationId,code])
+}
+model User {
+  id String @id @default(uuid()) @db.Uuid
+  email String @unique
+  passwordHash String
+  name String
+  phone String @default("")
+  status String @default("ACTIVE")
+  emailVerifiedAt DateTime?
+  platformRole String?
+  organizationAdminId String? @db.Uuid
+  lastLoginAt DateTime?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+model Membership {
+  id String @id @default(uuid()) @db.Uuid
+  labId String @db.Uuid
+  userId String @db.Uuid
+  status String @default("PENDING")
+  roles String[] @default(["MEMBER"])
+  approvedById String? @db.Uuid
+  approvedAt DateTime?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@unique([labId,userId])
+  @@index([labId,status])
+}
+model Session {
+  id String @id @default(uuid()) @db.Uuid
+  userId String @db.Uuid
+  tokenHash String @unique
+  csrfHash String
+  mfaVerifiedAt DateTime?
+  expiresAt DateTime
+  revokedAt DateTime?
+  userAgent String?
+  ip String?
+  createdAt DateTime @default(now())
+}
+model AccountToken {
+  id String @id @default(uuid()) @db.Uuid
+  userId String? @db.Uuid
+  labId String? @db.Uuid
+  email String
+  kind String
+  roles String[] @default([])
+  tokenHash String @unique
+  expiresAt DateTime
+  usedAt DateTime?
+  createdAt DateTime @default(now())
+}
+model TotpCredential {
+  id String @id @default(uuid()) @db.Uuid
+  userId String @unique @db.Uuid
+  encryptedSecret String
+  enabled Boolean @default(false)
+  lastCounter BigInt @default(-1)
+  recoveryHashes String[] @default([])
+  createdAt DateTime @default(now())
+}
+model StorageLocation {
+  id String @id @default(uuid()) @db.Uuid
+  labId String @db.Uuid
+  parentId String? @db.Uuid
+  code String
+  label String
+  kind String @default("CABINET")
+  hazardNotes String @default("")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@unique([labId,code])
+}
+model Supplier {
+  id String @id @default(uuid()) @db.Uuid
+  labId String @db.Uuid
+  name String
+  contacts String @default("")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@unique([labId,name])
+}
+model Chemical {
+  id String @id @default(uuid()) @db.Uuid
+  labId String @db.Uuid
+  name String
+  nameEn String @default("")
+  casNumber String @default("")
+  formula String @default("")
+  concentration String @default("")
+  purity String @default("")
+  physicalState String @default("LIQUID")
+  baseUnit String @default("mL")
+  hazards String[] @default([])
+  ghs String[] @default([])
+  storageGuidance String @default("")
+  reorderThreshold Decimal @default(0) @db.Decimal(20,6)
+  requiresSds Boolean @default(false)
+  requiresTraining Boolean @default(false)
+  archivedAt DateTime?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@index([labId,createdAt])
+}
+model ChemicalContainer {
+  id String @id @default(uuid()) @db.Uuid
+  labId String @db.Uuid
+  chemicalId String @db.Uuid
+  code String @unique
+  supplierId String? @db.Uuid
+  locationId String? @db.Uuid
+  lotNumber String
+  manufacturer String @default("")
+  receivedAt DateTime @default(now())
+  openedAt DateTime?
+  expiresAt DateTime?
+  initialQty Decimal @db.Decimal(20,6)
+  currentQty Decimal @db.Decimal(20,6)
+  reservedQty Decimal @default(0) @db.Decimal(20,6)
+  baseUnit String
+  status String @default("AVAILABLE")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@index([labId,status])
+}
+model StockTransaction {
+  id String @id @default(uuid()) @db.Uuid
+  labId String @db.Uuid
+  chemicalId String @db.Uuid
+  containerId String @db.Uuid
+  type String
+  qty Decimal @db.Decimal(20,6)
+  baseUnit String
+  referenceId String?
+  actorId String @db.Uuid
+  reason String
+  idempotencyKey String @unique
+  createdAt DateTime @default(now())
+  @@index([labId,createdAt])
+}
+model Withdrawal {
+  id String @id @default(uuid()) @db.Uuid
+  labId String @db.Uuid
+  requesterId String @db.Uuid
+  purpose String
+  status String @default("PENDING")
+  reviewerId String? @db.Uuid
+  reviewedAt DateTime?
+  note String @default("")
+  dispensedAt DateTime?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@index([labId,status])
+}
+model WithdrawalItem {
+  id String @id @default(uuid()) @db.Uuid
+  withdrawalId String @db.Uuid
+  chemicalId String @db.Uuid
+  requestedQty Decimal @db.Decimal(20,6)
+  approvedQty Decimal @default(0) @db.Decimal(20,6)
+  dispensedQty Decimal @default(0) @db.Decimal(20,6)
+  baseUnit String
+}
+model StockReservation {
+  id String @id @default(uuid()) @db.Uuid
+  itemId String @db.Uuid
+  containerId String @db.Uuid
+  qty Decimal @db.Decimal(20,6)
+  dispensedQty Decimal @default(0) @db.Decimal(20,6)
+  status String @default("ACTIVE")
+}
+model Stocktake {
+  id String @id @default(uuid()) @db.Uuid
+  labId String @db.Uuid
+  startedById String @db.Uuid
+  reviewerId String? @db.Uuid
+  status String @default("PENDING")
+  reason String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@index([labId,status])
+}
+model StocktakeLine {
+  id String @id @default(uuid()) @db.Uuid
+  stocktakeId String @db.Uuid
+  containerId String @db.Uuid
+  expectedQty Decimal @db.Decimal(20,6)
+  countedQty Decimal @db.Decimal(20,6)
+  @@unique([stocktakeId,containerId])
+}
+model StockTransfer {
+  id String @id @default(uuid()) @db.Uuid
+  labId String @db.Uuid
+  destinationLabId String @db.Uuid
+  containerId String @db.Uuid
+  destinationLocationId String? @db.Uuid
+  qty Decimal @db.Decimal(20,6)
+  status String @default("PENDING")
+  requesterId String @db.Uuid
+  sentById String? @db.Uuid
+  receivedById String? @db.Uuid
+  reason String
+  dispatchedAt DateTime?
+  receivedAt DateTime?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@index([labId,status])
+}
+model WasteRecord {
+  id String @id @default(uuid()) @db.Uuid
+  labId String @db.Uuid
+  containerId String @db.Uuid
+  qty Decimal @db.Decimal(20,6)
+  wasteType String
+  reason String
+  custodianId String @db.Uuid
+  destination String
+  documentId String? @db.Uuid
+  status String @default("PENDING")
+  disposedAt DateTime?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@index([labId,status])
+}
+model Equipment {
+  id String @id @default(uuid()) @db.Uuid
+  labId String @db.Uuid
+  code String
+  name String
+  category String @default("GENERAL")
+  model String @default("")
+  serialNumber String @default("")
+  assetTag String @default("")
+  manufacturer String @default("")
+  locationId String? @db.Uuid
+  status String @default("AVAILABLE")
+  requiresTraining Boolean @default(false)
+  bookingEnabled Boolean @default(true)
+  description String @default("")
+  calibrationRequired Boolean @default(false)
+  requiresSafetySignoff Boolean @default(false)
+  calibrationValidUntil DateTime?
+  nextServiceAt DateTime?
+  archivedAt DateTime?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@unique([labId,code])
+  @@index([labId,status])
+}
+model AvailabilityBlock {
+  id String @id @default(uuid()) @db.Uuid
+  labId String @db.Uuid
+  equipmentId String @db.Uuid
+  startsAt DateTime @db.Timestamptz(3)
+  endsAt DateTime @db.Timestamptz(3)
+  reason String
+  createdById String @db.Uuid
+  createdAt DateTime @default(now())
+}
+model Booking {
+  id String @id @default(uuid()) @db.Uuid
+  labId String @db.Uuid
+  equipmentId String @db.Uuid
+  requesterId String @db.Uuid
+  startsAt DateTime @db.Timestamptz(3)
+  endsAt DateTime @db.Timestamptz(3)
+  status String @default("PENDING")
+  purpose String
+  reviewerId String? @db.Uuid
+  reviewedAt DateTime?
+  note String @default("")
+  affected Boolean @default(false)
+  exceptionId String? @db.Uuid
+  quotaWaived Boolean @default(false)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@index([labId,status])
+  @@index([labId,requesterId,startsAt])
+}
+model BookingException {
+  id String @id @default(uuid()) @db.Uuid
+  labId String @db.Uuid
+  requesterId String @db.Uuid
+  week String
+  grantedDays Int
+  reason String
+  status String @default("PENDING")
+  reviewerId String? @db.Uuid
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@index([labId,status])
+}
+model EquipmentUsage {
+  id String @id @default(uuid()) @db.Uuid
+  labId String @db.Uuid
+  bookingId String @unique @db.Uuid
+  equipmentId String @db.Uuid
+  userId String @db.Uuid
+  checkedInAt DateTime @default(now())
+  checkedOutAt DateTime?
+  actualCondition String @default("")
+  notes String @default("")
+}
+model EquipmentIssue {
+  id String @id @default(uuid()) @db.Uuid
+  labId String @db.Uuid
+  equipmentId String @db.Uuid
+  reportedById String @db.Uuid
+  bookingId String? @db.Uuid
+  title String
+  description String
+  severity String @default("MEDIUM")
+  safetyStop Boolean @default(false)
+  documentId String? @db.Uuid
+  status String @default("OPEN")
+  closedAt DateTime?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@index([labId,status])
+}
+model Maintenance {
+  id String @id @default(uuid()) @db.Uuid
+  labId String @db.Uuid
+  equipmentId String @db.Uuid
+  issueId String? @db.Uuid
+  type String @default("REPAIR")
+  status String @default("OPEN")
+  assignedToId String? @db.Uuid
+  vendor String @default("")
+  costs Decimal @default(0) @db.Decimal(20,2)
+  resolution String @default("")
+  testResult String @default("")
+  completedAt DateTime?
+  verifiedById String? @db.Uuid
+  verifiedAt DateTime?
+  safetyVerifiedById String? @db.Uuid
+  safetyVerifiedAt DateTime?
+  nextDueAt DateTime?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@index([labId,status])
+}
+model Training {
+  id String @id @default(uuid()) @db.Uuid
+  labId String @db.Uuid
+  userId String @db.Uuid
+  equipmentId String? @db.Uuid
+  chemicalId String? @db.Uuid
+  title String
+  status String @default("PENDING")
+  certificateDocId String? @db.Uuid
+  trainedAt DateTime
+  validUntil DateTime
+  approvedById String? @db.Uuid
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@index([labId,status])
+}
+model Document {
+  id String @id @default(uuid()) @db.Uuid
+  labId String @db.Uuid
+  kind String
+  title String
+  version String
+  chemicalId String? @db.Uuid
+  equipmentId String? @db.Uuid
+  storageKey String @unique
+  originalName String
+  mimeType String
+  bytes Int
+  checksum String
+  uploadedById String @db.Uuid
+  visibility String @default("PRIVATE")
+  expiresAt DateTime?
+  scanState String @default("NOT_SCANNED")
+  createdAt DateTime @default(now())
+  @@index([labId,createdAt])
+}
+model AuditLog {
+  id String @id @default(uuid()) @db.Uuid
+  labId String? @db.Uuid
+  actorId String @db.Uuid
+  action String
+  entityType String
+  entityId String
+  before Json?
+  after Json?
+  effectiveRoles String[] @default([])
+  requestId String
+  ip String
+  userAgent String
+  createdAt DateTime @default(now())
+  @@index([labId,createdAt])
+}
+model Notification {
+  id String @id @default(uuid()) @db.Uuid
+  labId String? @db.Uuid
+  userId String @db.Uuid
+  kind String
+  title String
+  body String
+  link String
+  dedupeKey String @unique
+  readAt DateTime?
+  createdAt DateTime @default(now())
+  @@index([userId,createdAt])
+}
+model NotificationOutbox {
+  id String @id @default(uuid()) @db.Uuid
+  userId String? @db.Uuid
+  email String
+  subject String
+  body String
+  dedupeKey String @unique
+  status String @default("PENDING")
+  attempts Int @default(0)
+  lastError String?
+  nextAttemptAt DateTime @default(now())
+  sentAt DateTime?
+  createdAt DateTime @default(now())
+}
+model LabAnnouncement {
+  id String @id @default(uuid()) @db.Uuid
+  labId String @db.Uuid
+  title String
+  body String
+  createdById String @db.Uuid
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+model StorageCompatibility {
+  id String @id @default(uuid()) @db.Uuid
+  labId String @db.Uuid
+  chemicalId String @db.Uuid
+  otherChemicalId String @db.Uuid
+  decision String
+  notes String
+  documentId String @db.Uuid
+  verifiedById String @db.Uuid
+  createdAt DateTime @default(now())
+  @@index([labId,createdAt])
+}

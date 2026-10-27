@@ -1,0 +1,17 @@
+# Data model and migrations
+
+Prisma 7.10.1, PostgreSQL 17, pg driver adapter; CLI datasource is in root prisma.config.ts. Generated client in apps/api/src/generated/prisma (ignored; regenerate after install). Migration 202610250001_initial creates normalized tables; 202610250002_invariants adds SQL CHECK/FK/exclusion/append-only triggers not expressible in Prisma. Never replace these SQL migrations with db push.
+
+Tenancy: Organization → Laboratory; User ↔ Membership with scoped role array (PostgreSQL text[]). Role sets avoid a single global lab role. AccountToken unifies verification/reset/invitation with kind, single-use hash and expiry. Sessions store only token/CSRF hashes. TOTP secret is AES-256-GCM encrypted with key derived from local session secret; recovery codes are hashed.
+
+Chemical is a laboratory catalog entry containing formulation metadata, unit, hazards, threshold and eligibility policies. A separate shared template is not required in the local single-organization installation; cross-lab transfers create a destination catalog entry when needed. ChemicalContainer holds the physical projection and reservation amount. All quantities are NUMERIC(20,6). StockTransaction is an immutable positive-quantity ledger; direction is determined by type. WithdrawalItem and StockReservation support split FEFO allocation and partial dispensing. StocktakeLine holds expected/count values. StockTransfer records in-transit custody; waste has dedicated responsible-party and disposal evidence fields.
+
+Equipment uses lab-scoped unique code. Booking intervals are timestamptz and half-open [start,end). `btree_gist` exclusion prevents overlapping APPROVED/IN_USE bookings even when the service is bypassed. Per-user/lab advisory locks serialize quota decisions. Pending bookings consume quota but do not reserve a slot. EquipmentUsage is one-to-one booking. Issues, Maintenance, AvailabilityBlock and Training retain separate lifecycle evidence.
+
+Document metadata references randomly named private files outside Vite/public; visibility is LAB or PRIVATE. Notifications plus NotificationOutbox retain in-app events and retry state. AuditLog and StockTransaction reject UPDATE/DELETE via SQL triggers; authorized corrections use compensating entries.
+
+Custom SQL adds lab FKs, core entity FKs, composite (entityId,labId) constraints for critical resources, scoped code uniqueness, non-negative stock / reserved≤physical / partial-dispense constraints. Services check optional cross-entity references inside transactions. Indexes cover lab/status, lab/createdAt, requester intervals and unique idempotency/dedupe keys.
+
+The local DB role owns its schema for development; triggers are not a substitute for separate runtime/migration roles in a future production environment. No database reset or volume deletion is needed for normal operation.
+
+Further migrations `202610250003_reference_integrity`, `202610250004_session_assurance`, and `202610250005_safety_review` add remaining actor/reference FKs, session-level MFA proof, human StorageCompatibility reviews, and optional safety signoff on maintenance. Administrator authorization requires the current session to have passed MFA; enabling MFA in another session does not elevate an old session. Calibration metadata commits independently of final equipment release, while status stays unavailable until every work/issue condition passes.

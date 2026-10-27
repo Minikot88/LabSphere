@@ -1,0 +1,46 @@
+{
+  "name": "labsphere",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "scripts": {
+    "setup:local": "node scripts/setup-local.mjs",
+    "dev": "concurrently -k -n API,WEB \"npm run dev -w @labsphere/api\" \"npm run dev -w @labsphere/web\"",
+    "db:up": "docker compose up -d --wait postgres mailpit",
+    "db:generate": "prisma generate",
+    "db:migrate": "prisma migrate deploy",
+    "db:seed:dev": "tsx apps/api/prisma/seed.ts",
+    "bootstrap-admin": "tsx apps/api/prisma/bootstrap.ts",
+    "db:backup:local": "node scripts/database.mjs backup",
+    "db:restore:isolated": "node scripts/database.mjs restore",
+    "typecheck": "tsc -p apps/api/tsconfig.json --noEmit && tsc -p apps/web/tsconfig.json --noEmit",
+    "lint": "eslint apps packages scripts --max-warnings=0",
+    "test": "node scripts/migrate-test.mjs && vitest run",
+    "test:unit": "vitest run apps/api/test/domain.test.ts",
+    "build": "npm run build -w @labsphere/api && npm run build -w @labsphere/web",
+    "test:e2e": "node scripts/migrate-test.mjs && npm run build && playwright test",
+    "jobs:run": "tsx apps/api/src/jobs/run.ts"
+  },
+  "devDependencies": {
+    "@eslint/js": "9.39.2",
+    "@playwright/test": "1.58.2",
+    "@types/node": "24.10.1",
+    "concurrently": "9.2.1",
+    "eslint": "9.39.2",
+    "prisma": "7.10.1",
+    "tsx": "4.21.0",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.53.1",
+    "vitest": "4.0.18"
+  },
+  "dependencies": {
+    "dotenv": "17.2.3"
+  }
+}

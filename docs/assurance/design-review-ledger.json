@@ -1,0 +1,59 @@
+{
+  "assurance": "protected",
+  "unit": "owner-requested 51-screen design integration",
+  "execution": "solo with one read-only reviewer",
+  "budget": 3,
+  "calls": 3,
+  "status": "accepted_and_parent_verified",
+  "candidate": "docs/assurance/design-integration-manifest.json",
+  "scope": [
+    "apps/api/src/modules/experience.ts",
+    "apps/api/src/modules/queries.ts",
+    "apps/api/src/modules/inventory.ts",
+    "apps/api/src/modules/labels.ts",
+    "apps/api/src/modules/auth.ts",
+    "apps/api/src/security.ts"
+  ],
+  "evidence": {
+    "typecheck": "PASS",
+    "lint": "PASS",
+    "unitIntegration": "58/58 PASS incl invite audit and actor/date authorization",
+    "fullE2E": "6/6 prior revision PASS; final repeat now includes audit filter UI assertions"
+  },
+  "boundary": "Local workspace source review only; no production, external writes or database mutations",
+  "reviews": [
+    {
+      "call": 1,
+      "verdict": "fix-first",
+      "findings": [
+        "adjustment filter enum mismatch",
+        "mixed admin+safety private SDS without session proof",
+        "pre-existing booking purpose search oracle"
+      ],
+      "source": "read-only Vera"
+    },
+    {
+      "call": 2,
+      "verdict": "accept",
+      "scope": "six backend source files, revision 2",
+      "evidence": "Vera verified all three findings closed and source hashes matched"
+    },
+    {
+      "call": 3,
+      "verdict": "accept",
+      "scope": "revision3 six backend files; unchanged in frontend-only revision4",
+      "evidence": "Vera verified invite acceptance audit and actor/date restrictions"
+    }
+  ],
+  "finalTests": {
+    "unit": 58,
+    "screenScenarios": 3,
+    "workflowReruns": 3,
+    "secondary": 45,
+    "governance": 31
+  },
+  "note": "Complete original Master actor/date filters and invite permission-grant audit; same assurance-unit budget, final call3 pending",
+  "parentFrontendDelta": "Follow every API page for selectors/calendar; controlled preselection; tests oldest reference option and equipment deep-link",
+  "parentVerifiedManifestRevision": 5,
+  "reviewedBackendUnchanged": true
+}

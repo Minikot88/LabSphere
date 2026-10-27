@@ -1,0 +1,5 @@
+import {defineConfig} from '@playwright/test';
+import {config} from 'dotenv';
+config({quiet:true});
+const testUrl=new URL(process.env.DATABASE_URL!);testUrl.pathname='/labsphere_test';process.env.DATABASE_URL=testUrl.toString();
+export default defineConfig({testDir:'apps/web/e2e',globalSetup:'./apps/web/e2e/setup.ts',fullyParallel:false,workers:1,timeout:150000,expect:{timeout:12000},reporter:[['list'],['json',{outputFile:'docs/evidence/playwright.json'}]],use:{baseURL:'http://localhost:25174',trace:'off',screenshot:'only-on-failure'},projects:[{name:'desktop',use:{viewport:{width:1440,height:900}}},{name:'tablet',use:{viewport:{width:768,height:1024}}},{name:'mobile',use:{viewport:{width:390,height:844}}}],webServer:[{command:'npm run start -w @labsphere/api',url:'http://localhost:23002/api/v1/health',env:{API_PORT:'23002',WEB_URL:'http://localhost:25174',DATABASE_URL:testUrl.toString()},reuseExistingServer:false,timeout:60000},{command:'npm run preview -w @labsphere/web -- --port 25174',url:'http://localhost:25174',env:{API_URL:'http://localhost:23002'},reuseExistingServer:false,timeout:60000}]});

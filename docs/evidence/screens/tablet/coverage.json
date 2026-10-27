@@ -1,0 +1,367 @@
+{
+  "runId": "9ef39e04",
+  "screens": [
+    {
+      "id": "login",
+      "path": "/login",
+      "heading": "เข้าสู่ระบบ",
+      "overflow": false
+    },
+    {
+      "id": "register",
+      "path": "/register",
+      "heading": "สมัครสมาชิก",
+      "overflow": false
+    },
+    {
+      "id": "verify-email",
+      "path": "/verify-email",
+      "heading": "ยืนยันอีเมล",
+      "overflow": false
+    },
+    {
+      "id": "forgot-password",
+      "path": "/forgot-password",
+      "heading": "กู้คืนรหัสผ่าน",
+      "overflow": false
+    },
+    {
+      "id": "reset-password",
+      "path": "/reset-password",
+      "heading": "ตั้งรหัสผ่านใหม่",
+      "overflow": false
+    },
+    {
+      "id": "invite-accept",
+      "path": "/invite/accept",
+      "heading": "รับคำเชิญ",
+      "overflow": false
+    },
+    {
+      "id": "select-lab",
+      "path": "/select-lab",
+      "heading": "เลือกห้องปฏิบัติการ",
+      "overflow": false
+    },
+    {
+      "id": "screens",
+      "path": "/screens",
+      "heading": "สารบัญหน้าระบบ",
+      "overflow": false
+    },
+    {
+      "id": "dashboard",
+      "path": "/app/807b8c92-e9af-45aa-a465-ea7e7bb152b4/dashboard",
+      "heading": "ภาพรวมห้องปฏิบัติการ",
+      "overflow": false
+    },
+    {
+      "id": "notifications",
+      "path": "/notifications",
+      "heading": "การแจ้งเตือน",
+      "overflow": false
+    },
+    {
+      "id": "profile",
+      "path": "/profile",
+      "heading": "โปรไฟล์",
+      "overflow": false
+    },
+    {
+      "id": "security",
+      "path": "/account/security",
+      "heading": "ความปลอดภัยบัญชี",
+      "overflow": false
+    },
+    {
+      "id": "chemicals",
+      "path": "/app/807b8c92-e9af-45aa-a465-ea7e7bb152b4/chemicals",
+      "heading": "สารเคมี",
+      "overflow": false
+    },
+    {
+      "id": "chemical-new",
+      "path": "/app/807b8c92-e9af-45aa-a465-ea7e7bb152b4/chemicals/new",
+      "heading": "เพิ่มสารเคมี",
+      "overflow": false
+    },
+    {
+      "id": "chemical-detail",
+      "path": "/app/807b8c92-e9af-45aa-a465-ea7e7bb152b4/chemicals/ddd6c6ef-332c-4780-982d-c19eb860ccb7",
+      "heading": "E2E chemical 30c018e1",
+      "overflow": false
+    },
+    {
+      "id": "container-detail",
+      "path": "/app/807b8c92-e9af-45aa-a465-ea7e7bb152b4/containers/cc12f644-ec1b-4137-876c-ec0326b8db0d",
+      "heading": "E2E-30c018e1-2",
+      "overflow": false
+    },
+    {
+      "id": "receive",
+      "path": "/app/807b8c92-e9af-45aa-a465-ea7e7bb152b4/inventory/receive",
+      "heading": "รับเข้าสารเคมี",
+      "overflow": false
+    },
+    {
+      "id": "withdrawals",
+      "path": "/app/807b8c92-e9af-45aa-a465-ea7e7bb152b4/withdrawals",
+      "heading": "คำขอเบิกสารเคมี",
+      "overflow": false
+    },
+    {
+      "id": "withdrawal-detail",
+      "path": "/app/807b8c92-e9af-45aa-a465-ea7e7bb152b4/withdrawals/89754e3b-d309-45b4-87c3-736b9b2cdc28",
+      "heading": "คำขอเบิกสารเคมี",
+      "overflow": false
+    },
+    {
+      "id": "stocktakes",
+      "path": "/app/807b8c92-e9af-45aa-a465-ea7e7bb152b4/inventory/stocktakes",
+      "heading": "ตรวจนับสต็อก",
+      "overflow": false
+    },
+    {
+      "id": "transfers",
+      "path": "/app/807b8c92-e9af-45aa-a465-ea7e7bb152b4/inventory/transfers",
+      "heading": "โอนสารเคมี",
+      "overflow": false
+    },
+    {
+      "id": "waste",
+      "path": "/app/807b8c92-e9af-45aa-a465-ea7e7bb152b4/inventory/waste",
+      "heading": "ของเสียอันตราย",
+      "overflow": false
+    },
+    {
+      "id": "equipment",
+      "path": "/app/807b8c92-e9af-45aa-a465-ea7e7bb152b4/equipment",
+      "heading": "เครื่องมือและครุภัณฑ์",
+      "overflow": false
+    },
+    {
+      "id": "equipment-detail",
+      "path": "/app/807b8c92-e9af-45aa-a465-ea7e7bb152b4/equipment/a130d226-feb5-4eeb-82a6-4c4eee2c3ca7",
+      "heading": "E2E equipment 30c018e1",
+      "overflow": false
+    },
+    {
+      "id": "calendar",
+      "path": "/app/807b8c92-e9af-45aa-a465-ea7e7bb152b4/bookings/calendar",
+      "heading": "ปฏิทินการจอง",
+      "overflow": false
+    },
+    {
+      "id": "bookings",
+      "path": "/app/807b8c92-e9af-45aa-a465-ea7e7bb152b4/bookings",
+      "heading": "การจองเครื่องมือ",
+      "overflow": false
+    },
+    {
+      "id": "booking-new",
+      "path": "/app/807b8c92-e9af-45aa-a465-ea7e7bb152b4/bookings/new",
+      "heading": "เพิ่มการจองเครื่องมือ",
+      "overflow": false
+    },
+    {
+      "id": "booking-detail",
+      "path": "/app/807b8c92-e9af-45aa-a465-ea7e7bb152b4/bookings/f3bf3b27-f321-4290-a6c0-a4d627db69ed",
+      "heading": "การจองเครื่องมือ",
+      "overflow": false
+    },
+    {
+      "id": "issues",
+      "path": "/app/807b8c92-e9af-45aa-a465-ea7e7bb152b4/equipment/issues",
+      "heading": "แจ้งปัญหาเครื่องมือ",
+      "overflow": false
+    },
+    {
+      "id": "issue-new",
+      "path": "/app/807b8c92-e9af-45aa-a465-ea7e7bb152b4/equipment/issues/new",
+      "heading": "เพิ่มแจ้งปัญหาเครื่องมือ",
+      "overflow": false
+    },
+    {
+      "id": "issue-detail",
+      "path": "/app/807b8c92-e9af-45aa-a465-ea7e7bb152b4/equipment/issues/b05e362b-4c41-47d1-bfba-6dfc3456c814",
+      "heading": "E2E fault 30c018e1",
+      "overflow": false
+    },
+    {
+      "id": "maintenance",
+      "path": "/app/807b8c92-e9af-45aa-a465-ea7e7bb152b4/maintenance",
+      "heading": "ซ่อมและบำรุงรักษา",
+      "overflow": false
+    },
+    {
+      "id": "maintenance-detail",
+      "path": "/app/807b8c92-e9af-45aa-a465-ea7e7bb152b4/maintenance/00c5e140-0a21-4574-9cd6-0c6e2cb14150",
+      "heading": "ซ่อมและบำรุงรักษา",
+      "overflow": false
+    },
+    {
+      "id": "safety",
+      "path": "/app/807b8c92-e9af-45aa-a465-ea7e7bb152b4/safety",
+      "heading": "ความปลอดภัย",
+      "overflow": false
+    },
+    {
+      "id": "documents",
+      "path": "/app/807b8c92-e9af-45aa-a465-ea7e7bb152b4/documents",
+      "heading": "เอกสารและ SDS",
+      "overflow": false
+    },
+    {
+      "id": "training",
+      "path": "/app/807b8c92-e9af-45aa-a465-ea7e7bb152b4/training",
+      "heading": "การอบรมและคุณสมบัติ",
+      "overflow": false
+    },
+    {
+      "id": "approvals",
+      "path": "/app/807b8c92-e9af-45aa-a465-ea7e7bb152b4/approvals",
+      "heading": "งานรออนุมัติ",
+      "overflow": false
+    },
+    {
+      "id": "members",
+      "path": "/app/807b8c92-e9af-45aa-a465-ea7e7bb152b4/members",
+      "heading": "สมาชิกและสิทธิ์",
+      "overflow": false
+    },
+    {
+      "id": "reports",
+      "path": "/app/807b8c92-e9af-45aa-a465-ea7e7bb152b4/reports",
+      "heading": "รายงานและสถิติ",
+      "overflow": false
+    },
+    {
+      "id": "activity",
+      "path": "/app/807b8c92-e9af-45aa-a465-ea7e7bb152b4/activity",
+      "heading": "ประวัติการดำเนินการ",
+      "overflow": false
+    },
+    {
+      "id": "settings",
+      "path": "/app/807b8c92-e9af-45aa-a465-ea7e7bb152b4/settings",
+      "heading": "ตั้งค่าห้องปฏิบัติการ",
+      "overflow": false
+    },
+    {
+      "id": "platform",
+      "path": "/platform",
+      "heading": "ภาพรวมแพลตฟอร์ม",
+      "overflow": false
+    },
+    {
+      "id": "platform-labs",
+      "path": "/platform/labs",
+      "heading": "ห้องปฏิบัติการทั้งหมด",
+      "overflow": false
+    },
+    {
+      "id": "platform-lab-detail",
+      "path": "/platform/labs/807b8c92-e9af-45aa-a465-ea7e7bb152b4",
+      "heading": "ห้องเคมีวิเคราะห์",
+      "overflow": false
+    },
+    {
+      "id": "platform-orgs",
+      "path": "/platform/organizations",
+      "heading": "องค์กร / หน่วยงาน",
+      "overflow": false
+    },
+    {
+      "id": "platform-users",
+      "path": "/platform/users",
+      "heading": "บัญชีผู้ใช้ทั้งหมด",
+      "overflow": false
+    },
+    {
+      "id": "platform-audit",
+      "path": "/platform/audit",
+      "heading": "Audit ระดับแพลตฟอร์ม",
+      "overflow": false
+    },
+    {
+      "id": "platform-health",
+      "path": "/platform/health",
+      "heading": "สถานะบริการ",
+      "overflow": false
+    },
+    {
+      "id": "forbidden",
+      "path": "/403",
+      "heading": "คุณไม่มีสิทธิ์เข้าถึงหน้านี้",
+      "overflow": false
+    },
+    {
+      "id": "not-found",
+      "path": "/404",
+      "heading": "ไม่พบหน้าที่ต้องการ",
+      "overflow": false
+    },
+    {
+      "id": "offline",
+      "path": "/offline",
+      "heading": "ไม่สามารถเชื่อมต่อระบบ",
+      "overflow": false
+    }
+  ],
+  "additionalRoutes": [
+    "/app/807b8c92-e9af-45aa-a465-ea7e7bb152b4/safety/compatibility",
+    "/app/807b8c92-e9af-45aa-a465-ea7e7bb152b4/safety/compatibility/new",
+    "/app/807b8c92-e9af-45aa-a465-ea7e7bb152b4/inventory/returns",
+    "/app/807b8c92-e9af-45aa-a465-ea7e7bb152b4/inventory/returns/new",
+    "/app/807b8c92-e9af-45aa-a465-ea7e7bb152b4/chemicals",
+    "/app/807b8c92-e9af-45aa-a465-ea7e7bb152b4/chemicals/new",
+    "/app/807b8c92-e9af-45aa-a465-ea7e7bb152b4/containers",
+    "/app/807b8c92-e9af-45aa-a465-ea7e7bb152b4/withdrawals",
+    "/app/807b8c92-e9af-45aa-a465-ea7e7bb152b4/withdrawals/new",
+    "/app/807b8c92-e9af-45aa-a465-ea7e7bb152b4/inventory/transactions",
+    "/app/807b8c92-e9af-45aa-a465-ea7e7bb152b4/inventory/stocktakes",
+    "/app/807b8c92-e9af-45aa-a465-ea7e7bb152b4/inventory/stocktakes/new",
+    "/app/807b8c92-e9af-45aa-a465-ea7e7bb152b4/inventory/transfers",
+    "/app/807b8c92-e9af-45aa-a465-ea7e7bb152b4/inventory/transfers/new",
+    "/app/807b8c92-e9af-45aa-a465-ea7e7bb152b4/inventory/waste",
+    "/app/807b8c92-e9af-45aa-a465-ea7e7bb152b4/inventory/waste/new",
+    "/app/807b8c92-e9af-45aa-a465-ea7e7bb152b4/equipment",
+    "/app/807b8c92-e9af-45aa-a465-ea7e7bb152b4/equipment/new",
+    "/app/807b8c92-e9af-45aa-a465-ea7e7bb152b4/bookings",
+    "/app/807b8c92-e9af-45aa-a465-ea7e7bb152b4/bookings/new",
+    "/app/807b8c92-e9af-45aa-a465-ea7e7bb152b4/bookings/exceptions",
+    "/app/807b8c92-e9af-45aa-a465-ea7e7bb152b4/bookings/exceptions/new",
+    "/app/807b8c92-e9af-45aa-a465-ea7e7bb152b4/equipment/issues",
+    "/app/807b8c92-e9af-45aa-a465-ea7e7bb152b4/equipment/issues/new",
+    "/app/807b8c92-e9af-45aa-a465-ea7e7bb152b4/maintenance",
+    "/app/807b8c92-e9af-45aa-a465-ea7e7bb152b4/maintenance/new",
+    "/app/807b8c92-e9af-45aa-a465-ea7e7bb152b4/calibrations",
+    "/app/807b8c92-e9af-45aa-a465-ea7e7bb152b4/training",
+    "/app/807b8c92-e9af-45aa-a465-ea7e7bb152b4/training/new",
+    "/app/807b8c92-e9af-45aa-a465-ea7e7bb152b4/documents",
+    "/app/807b8c92-e9af-45aa-a465-ea7e7bb152b4/documents/new",
+    "/app/807b8c92-e9af-45aa-a465-ea7e7bb152b4/members",
+    "/app/807b8c92-e9af-45aa-a465-ea7e7bb152b4/activity",
+    "/app/807b8c92-e9af-45aa-a465-ea7e7bb152b4/settings/locations",
+    "/app/807b8c92-e9af-45aa-a465-ea7e7bb152b4/settings/locations/new",
+    "/app/807b8c92-e9af-45aa-a465-ea7e7bb152b4/settings/suppliers",
+    "/app/807b8c92-e9af-45aa-a465-ea7e7bb152b4/settings/suppliers/new",
+    "/app/807b8c92-e9af-45aa-a465-ea7e7bb152b4/announcements",
+    "/app/807b8c92-e9af-45aa-a465-ea7e7bb152b4/announcements/new",
+    "/app/807b8c92-e9af-45aa-a465-ea7e7bb152b4/inventory/returns/3ceb0011-4374-45fb-a55e-41702b5f9cbc",
+    "/app/807b8c92-e9af-45aa-a465-ea7e7bb152b4/inventory/stocktakes/cfa44956-c344-4034-bdd8-926071fa4ccd",
+    "/app/807b8c92-e9af-45aa-a465-ea7e7bb152b4/inventory/transfers/9bbec832-84c8-4ac7-9ed0-40a84a96f131",
+    "/app/807b8c92-e9af-45aa-a465-ea7e7bb152b4/inventory/waste/d1a682f0-5c5f-449f-a291-780ca006b10a",
+    "/app/807b8c92-e9af-45aa-a465-ea7e7bb152b4/bookings/exceptions/bb6e9df2-dc56-4964-9051-6aa3578e77d7",
+    "/app/807b8c92-e9af-45aa-a465-ea7e7bb152b4/training/7d1f48f3-dfea-4654-9271-c31b7fc19bcf",
+    "/app/807b8c92-e9af-45aa-a465-ea7e7bb152b4/documents/b0fda1f2-86a5-42c4-9bf7-f18db0f1464b",
+    "/app/807b8c92-e9af-45aa-a465-ea7e7bb152b4/safety/compatibility/1f8ba2f5-e2f1-4c1e-bd04-bd2e4d5bf066",
+    "/app/807b8c92-e9af-45aa-a465-ea7e7bb152b4/calibrations/5de9c078-2fa7-41c9-bbc6-14fe155a181f"
+  ],
+  "pageErrors": [],
+  "apiErrors": [],
+  "consoleErrors": [],
+  "expectedOfflineErrors": [
+    "Failed to load resource: net::ERR_FAILED"
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "checkedAt": "2026-10-27T02:13:17.114Z",
+  "database": "labsphere (local development)",
+  "idempotentSeed": true,
+  "before": {
+    "organizations": 1,
+    "labs": 3,
+    "users": 19,
+    "memberships": 21,
+    "chemicals": 9,
+    "containers": 18,
+    "equipment": 12,
+    "training": 12,
+    "documents": 9,
+    "ledger": 18,
+    "audit": 3
+  },
+  "after": {
+    "organizations": 1,
+    "labs": 3,
+    "users": 19,
+    "memberships": 21,
+    "chemicals": 9,
+    "containers": 18,
+    "equipment": 12,
+    "training": 12,
+    "documents": 9,
+    "ledger": 18,
+    "audit": 3
+  },
+  "balanceAndCountHash": {
+    "before": "2f2b4b0269f67670e9842e09c6ddacc0033d9c2a2c4455834e76dbf72446e840",
+    "after": "2f2b4b0269f67670e9842e09c6ddacc0033d9c2a2c4455834e76dbf72446e840"
+  },
+  "migrations": [
+    {
+      "migration_name": "202610250001_initial",
+      "finished_at": "2026-10-25T07:17:05.578Z"
+    },
+    {
+      "migration_name": "202610250002_invariants",
+      "finished_at": "2026-10-25T07:17:05.704Z"
+    },
+    {
+      "migration_name": "202610250003_reference_integrity",
+      "finished_at": "2026-10-25T07:46:37.899Z"
+    },
+    {
+      "migration_name": "202610250004_session_assurance",
+      "finished_at": "2026-10-25T07:53:50.026Z"
+    },
+    {
+      "migration_name": "202610250005_safety_review",
+      "finished_at": "2026-10-25T08:01:18.110Z"
+    },
+    {
+      "migration_name": "202610250006_private_documents",
+      "finished_at": "2026-10-25T08:51:51.597Z"
+    }
+  ]
+}

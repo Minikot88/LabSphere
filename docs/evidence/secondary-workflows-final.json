@@ -1,0 +1,228 @@
+{
+  "checkedAt": "2026-10-27T02:34:14.495Z",
+  "database": "labsphere_test",
+  "fixtureNote": "New per-run synthetic users/resources only. No-show fixture explicitly prepared as an elapsed approved booking in this isolated database.",
+  "status": "PASS",
+  "checks": [
+    {
+      "label": "isolated admin login 0",
+      "status": "PASS",
+      "http": 200
+    },
+    {
+      "label": "isolated MFA setup 0",
+      "status": "PASS",
+      "http": 200
+    },
+    {
+      "label": "isolated MFA confirm 0",
+      "status": "PASS",
+      "http": 200
+    },
+    {
+      "label": "isolated admin login 1",
+      "status": "PASS",
+      "http": 200
+    },
+    {
+      "label": "isolated MFA setup 1",
+      "status": "PASS",
+      "http": 200
+    },
+    {
+      "label": "isolated MFA confirm 1",
+      "status": "PASS",
+      "http": 200
+    },
+    {
+      "label": "new member invitation",
+      "status": "PASS",
+      "http": 200
+    },
+    {
+      "label": "accept new-account invitation",
+      "status": "PASS",
+      "http": 200
+    },
+    {
+      "label": "single-use invite replay rejected",
+      "status": "PASS",
+      "http": 422
+    },
+    {
+      "label": "invited account login",
+      "status": "PASS",
+      "http": 200
+    },
+    {
+      "label": "invite existing account to BIO",
+      "status": "PASS",
+      "http": 200
+    },
+    {
+      "label": "existing invite requires login",
+      "status": "PASS",
+      "http": 401
+    },
+    {
+      "label": "existing-account authenticated acceptance",
+      "status": "PASS",
+      "http": 200
+    },
+    {
+      "label": "invited member lab list",
+      "status": "PASS",
+      "http": 200
+    },
+    {
+      "label": "member has both authorized labs",
+      "status": "PASS"
+    },
+    {
+      "label": "secondary equipment creation",
+      "status": "PASS",
+      "http": 200
+    },
+    {
+      "label": "secondary booking submit",
+      "status": "PASS",
+      "http": 200
+    },
+    {
+      "label": "secondary booking approval",
+      "status": "PASS",
+      "http": 200
+    },
+    {
+      "label": "reschedule clears approval",
+      "status": "PASS",
+      "http": 200
+    },
+    {
+      "label": "rescheduled booking pending, reviewer cleared",
+      "status": "PASS"
+    },
+    {
+      "label": "booking rejection",
+      "status": "PASS",
+      "http": 200
+    },
+    {
+      "label": "cancel fixture submit",
+      "status": "PASS",
+      "http": 200
+    },
+    {
+      "label": "requester cancellation",
+      "status": "PASS",
+      "http": 200
+    },
+    {
+      "label": "no-show fixture submit",
+      "status": "PASS",
+      "http": 200
+    },
+    {
+      "label": "no-show fixture approve",
+      "status": "PASS",
+      "http": 200
+    },
+    {
+      "label": "elapsed approved booking no-show",
+      "status": "PASS",
+      "http": 200
+    },
+    {
+      "label": "no-show quota waiver",
+      "status": "PASS",
+      "http": 200
+    },
+    {
+      "label": "waiver persisted",
+      "status": "PASS"
+    },
+    {
+      "label": "secondary chemical create",
+      "status": "PASS",
+      "http": 200
+    },
+    {
+      "label": "secondary receipt",
+      "status": "PASS",
+      "http": 200
+    },
+    {
+      "label": "transfer request",
+      "status": "PASS",
+      "http": 200
+    },
+    {
+      "label": "transfer dispatch",
+      "status": "PASS",
+      "http": 200
+    },
+    {
+      "label": "dispatch source balance 90",
+      "status": "PASS"
+    },
+    {
+      "label": "destination rejects in-transit transfer",
+      "status": "PASS",
+      "http": 200
+    },
+    {
+      "label": "source accepts physical return",
+      "status": "PASS",
+      "http": 200
+    },
+    {
+      "label": "source balance restored exactly 100",
+      "status": "PASS"
+    },
+    {
+      "label": "secondary withdrawal submit",
+      "status": "PASS",
+      "http": 200
+    },
+    {
+      "label": "withdrawal rejection",
+      "status": "PASS",
+      "http": 200
+    },
+    {
+      "label": "profile save",
+      "status": "PASS",
+      "http": 200
+    },
+    {
+      "label": "second own test login",
+      "status": "PASS",
+      "http": 200
+    },
+    {
+      "label": "own test password change",
+      "status": "PASS",
+      "http": 200
+    },
+    {
+      "label": "other test session revoked by password change",
+      "status": "PASS",
+      "http": 401
+    },
+    {
+      "label": "current test logout",
+      "status": "PASS",
+      "http": 200
+    },
+    {
+      "label": "new password works",
+      "status": "PASS",
+      "http": 200
+    },
+    {
+      "label": "new-password test logout",
+      "status": "PASS",
+      "http": 200
+    }
+  ]
+}

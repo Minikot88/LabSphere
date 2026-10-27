@@ -1,0 +1,44 @@
+{
+  "candidate": "labsphere-local-c2",
+  "attempt": "protected-review-2",
+  "assurance_unit": "local-master-build",
+  "call": 2,
+  "cap": 3,
+  "remaining": 1,
+  "state": "completed",
+  "freeze": "Frozen application manifest in candidate-c2.json",
+  "files": [
+    {
+      "path": "apps/api/src/modules/auth.ts",
+      "sha256": "b40443eaa4d0961dc8f7c5a9b39a77fa5a17a56ccd9bd206201dfe9e3f2da4be"
+    },
+    {
+      "path": "apps/api/src/modules/bookings.ts",
+      "sha256": "893d115b25a036d6dc61a122883a456c2dd5e2bfa3036ad7aaa47a090987ddaf"
+    },
+    {
+      "path": "apps/api/src/modules/inventory.ts",
+      "sha256": "3496862fbfbb3009a2eee7c8f56a3546d3a2ac38a726ac50ff968bf4c5d492e2"
+    },
+    {
+      "path": "apps/api/src/modules/operations.ts",
+      "sha256": "b2f1aab40c2cc477737650c6cd85a421703fda170c0f385548e52c1361a55669"
+    },
+    {
+      "path": "apps/api/src/modules/safety.ts",
+      "sha256": "23b246aff229afe37ec07c420e11543cd51d5957c04c615311793488875486fb"
+    },
+    {
+      "path": "apps/api/src/security.ts",
+      "sha256": "528b4bc7667ad5cd32ff69a034dbf0cf51876cefa2bca8a9ded3720c1ebc8dd7"
+    }
+  ],
+  "parentEvidence": [
+    "37 real PostgreSQL unit/integration tests passed",
+    "typecheck/lint passed",
+    "final compiled E2E run in progress"
+  ],
+  "priorVerdict": "fix-first; all five findings patched and regression-tested",
+  "authority": "Local only; no external action",
+  "verdict": "fix-first"
+}

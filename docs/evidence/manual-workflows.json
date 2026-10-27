@@ -1,0 +1,70 @@
+{
+  "date": "2026-10-25T08:19:50.804Z",
+  "database": "labsphere_test",
+  "checks": [
+    {
+      "name": "login manual-admin-1d177e3d",
+      "status": "PASS"
+    },
+    {
+      "name": "admin MFA enrollment",
+      "status": "PASS"
+    },
+    {
+      "name": "invite persisted and queued",
+      "status": "PASS"
+    },
+    {
+      "name": "new invite accepted",
+      "status": "PASS"
+    },
+    {
+      "name": "invitation is single use",
+      "status": "PASS"
+    },
+    {
+      "name": "login manual-invite-1d177e3d",
+      "status": "PASS"
+    },
+    {
+      "name": "invited member can use lab",
+      "status": "PASS"
+    },
+    {
+      "name": "login member.chem",
+      "status": "PASS"
+    },
+    {
+      "name": "own lab read CHEM",
+      "status": "PASS"
+    },
+    {
+      "name": "foreign lab denied CHEM",
+      "status": "PASS"
+    },
+    {
+      "name": "login member.bio",
+      "status": "PASS"
+    },
+    {
+      "name": "own lab read BIO",
+      "status": "PASS"
+    },
+    {
+      "name": "foreign lab denied BIO",
+      "status": "PASS"
+    },
+    {
+      "name": "login member.mat",
+      "status": "PASS"
+    },
+    {
+      "name": "own lab read MAT",
+      "status": "PASS"
+    },
+    {
+      "name": "foreign lab denied MAT",
+      "status": "PASS"
+    }
+  ]
+}

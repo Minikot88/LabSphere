@@ -1,0 +1,159 @@
+{
+  "checkedAt": "2026-10-27T02:41:10.326Z",
+  "database": "labsphere_test",
+  "scope": "New synthetic organization/lab/users only; no existing development accounts altered",
+  "status": "PASS",
+  "checks": [
+    {
+      "label": "isolated platform login",
+      "status": "PASS",
+      "http": 200
+    },
+    {
+      "label": "isolated platform MFA setup",
+      "status": "PASS",
+      "http": 200
+    },
+    {
+      "label": "isolated platform MFA confirm",
+      "status": "PASS",
+      "http": 200
+    },
+    {
+      "label": "governance organization create",
+      "status": "PASS",
+      "http": 200
+    },
+    {
+      "label": "governance laboratory create",
+      "status": "PASS",
+      "http": 200
+    },
+    {
+      "label": "isolated member login",
+      "status": "PASS",
+      "http": 200
+    },
+    {
+      "label": "member training submission",
+      "status": "PASS",
+      "http": 200
+    },
+    {
+      "label": "training pending before safety approval",
+      "status": "PASS"
+    },
+    {
+      "label": "authorized safety approval",
+      "status": "PASS",
+      "http": 200
+    },
+    {
+      "label": "member training detail",
+      "status": "PASS",
+      "http": 200
+    },
+    {
+      "label": "approved training visible to member",
+      "status": "PASS"
+    },
+    {
+      "label": "training revocation",
+      "status": "PASS",
+      "http": 200
+    },
+    {
+      "label": "revoked training detail",
+      "status": "PASS",
+      "http": 200
+    },
+    {
+      "label": "revocation persisted",
+      "status": "PASS"
+    },
+    {
+      "label": "settings actual save",
+      "status": "PASS",
+      "http": 200
+    },
+    {
+      "label": "settings actual read",
+      "status": "PASS",
+      "http": 200
+    },
+    {
+      "label": "saved policy round-trip",
+      "status": "PASS"
+    },
+    {
+      "label": "location create",
+      "status": "PASS",
+      "http": 200
+    },
+    {
+      "label": "supplier create",
+      "status": "PASS",
+      "http": 200
+    },
+    {
+      "label": "announcement create",
+      "status": "PASS",
+      "http": 200
+    },
+    {
+      "label": "membership suspension",
+      "status": "PASS",
+      "http": 200
+    },
+    {
+      "label": "suspended membership denied",
+      "status": "PASS",
+      "http": 403
+    },
+    {
+      "label": "membership reactivation",
+      "status": "PASS",
+      "http": 200
+    },
+    {
+      "label": "reactivated membership read",
+      "status": "PASS",
+      "http": 200
+    },
+    {
+      "label": "platform account suspension",
+      "status": "PASS",
+      "http": 200
+    },
+    {
+      "label": "suspended account session denied",
+      "status": "PASS",
+      "http": 401
+    },
+    {
+      "label": "platform account restoration",
+      "status": "PASS",
+      "http": 200
+    },
+    {
+      "label": "restored account fresh login",
+      "status": "PASS",
+      "http": 200
+    },
+    {
+      "label": "platform self-suspension denied",
+      "status": "PASS",
+      "http": 409
+    },
+    {
+      "label": "governance proof member logout",
+      "status": "PASS",
+      "http": 200
+    },
+    {
+      "label": "governance proof admin logout",
+      "status": "PASS",
+      "http": 200
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "agents": [
+    {
+      "agent_id": "b340af9a-d226-5d68-94ad-1fb10b6f529f",
+      "name": "mira",
+      "role": "explorer"
+    },
+    {
+      "agent_id": "bcf0c5d2-93a5-51e8-823d-6d6853ec9cbd",
+      "name": "arin",
+      "role": "implementer"
+    },
+    {
+      "agent_id": "bdd36af5-ec7e-5209-964b-789c47105470",
+      "name": "vera",
+      "role": "reviewer"
+    },
+    {
+      "agent_id": "f2359878-3668-54fc-af45-905247df8374",
+      "name": "nami",
+      "role": "context_keeper"
+    }
+  ],
+  "identity_policy": "name_and_agent_id_are_immutable",
+  "schema_version": 1
+}

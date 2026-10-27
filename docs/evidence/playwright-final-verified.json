@@ -1,0 +1,51 @@
+{
+  "checkedAt": "2026-10-27T03:10:33.186Z",
+  "status": "PASS",
+  "passed": 6,
+  "failed": 0,
+  "applicationUnchangedAcrossRuns": true,
+  "manifest": "docs/assurance/design-integration-manifest.json",
+  "sourceReports": {
+    "screenCases": "docs/evidence/playwright-reference-routes-final.json",
+    "workflowRerun": "docs/evidence/playwright-workflows-final.json"
+  },
+  "note": "The first full run passed all three screen suites; its three workflow assertions checked image width before asynchronous load. Only that assertion changed to wait for actual decode. All three workflow reruns passed. Prior raw failures are preserved.",
+  "cases": [
+    {
+      "title": "all 51 design screens, additional module routes, tabs and offline recovery",
+      "project": "desktop",
+      "status": "expected",
+      "result": "passed"
+    },
+    {
+      "title": "all 51 design screens, additional module routes, tabs and offline recovery",
+      "project": "tablet",
+      "status": "expected",
+      "result": "passed"
+    },
+    {
+      "title": "all 51 design screens, additional module routes, tabs and offline recovery",
+      "project": "mobile",
+      "status": "expected",
+      "result": "passed"
+    },
+    {
+      "title": "inventory, bookings, safety, documents and account workflows",
+      "project": "desktop",
+      "status": "expected",
+      "result": "passed"
+    },
+    {
+      "title": "inventory, bookings, safety, documents and account workflows",
+      "project": "tablet",
+      "status": "expected",
+      "result": "passed"
+    },
+    {
+      "title": "inventory, bookings, safety, documents and account workflows",
+      "project": "mobile",
+      "status": "expected",
+      "result": "passed"
+    }
+  ]
+}

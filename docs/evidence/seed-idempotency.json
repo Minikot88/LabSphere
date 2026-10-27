@@ -1,0 +1,30 @@
+{
+  "database": "labsphere",
+  "status": "PASS",
+  "before": {
+    "organizations": 1,
+    "laboratories": 3,
+    "users": 19,
+    "chemicals": 9,
+    "containers": 18,
+    "equipment": 12,
+    "training": 12,
+    "documents": 9,
+    "bookings": 3,
+    "issues": 3,
+    "maintenance": 3
+  },
+  "after": {
+    "organizations": 1,
+    "laboratories": 3,
+    "users": 19,
+    "chemicals": 9,
+    "containers": 18,
+    "equipment": 12,
+    "training": 12,
+    "documents": 9,
+    "bookings": 3,
+    "issues": 3,
+    "maintenance": 3
+  }
+}

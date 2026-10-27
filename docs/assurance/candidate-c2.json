@@ -1,0 +1,243 @@
+{
+  "candidate": "labsphere-local-c2",
+  "state": "frozen",
+  "boundary": "Application, schemas, migrations, tests, configs; reports/evidence generated separately",
+  "files": [
+    {
+      "path": "apps/api/package.json",
+      "sha256": "ba083c9105033acc001ec3906d9274ea3323d76053b2e3d2062cccc0c0026d81"
+    },
+    {
+      "path": "apps/api/prisma/bootstrap.ts",
+      "sha256": "d56edd4b55a22ef34e7d9b3a39f236cf8540312fc6f95be0821f8f345d53c674"
+    },
+    {
+      "path": "apps/api/prisma/migrations/202610250001_initial/migration.sql",
+      "sha256": "14f42ed689ec0b331a84f21dbb1089f94d8834e04a240c849e97761bcc831a57"
+    },
+    {
+      "path": "apps/api/prisma/migrations/202610250002_invariants/migration.sql",
+      "sha256": "3dab091d1a573afe223784b224a3bfd1777b6a1b72918faee8a377583943afa0"
+    },
+    {
+      "path": "apps/api/prisma/migrations/202610250003_reference_integrity/migration.sql",
+      "sha256": "1dd849aa89fa4bdaa465617b7ad51b2c6306df213fb15bdc70185f922f961a62"
+    },
+    {
+      "path": "apps/api/prisma/migrations/202610250004_session_assurance/migration.sql",
+      "sha256": "cd87697a68ef57273c63df2c4ed20f03af0b92bf9d66def4582798a50ef666d2"
+    },
+    {
+      "path": "apps/api/prisma/migrations/202610250005_safety_review/migration.sql",
+      "sha256": "8cde48c5e77ff61f91724aae229c69c9f2b45e357959c294a67f425951bb2e8f"
+    },
+    {
+      "path": "apps/api/prisma/migrations/migration_lock.toml",
+      "sha256": "1db17a8d051aa136110736752c5e1f8b7ed92b6ea8e803112fbbe2497047c210"
+    },
+    {
+      "path": "apps/api/prisma/schema.prisma",
+      "sha256": "424045cc4cd1c40cdc8dda680121a1306db95810ffdae9e2ad65360bc32bbc22"
+    },
+    {
+      "path": "apps/api/prisma/seed.ts",
+      "sha256": "d0829a68a97c88e6edbdf257084faebcd956cd42babc20a2942a28de778558f0"
+    },
+    {
+      "path": "apps/api/src/adapters.ts",
+      "sha256": "d3c64ed689bca3d4951d0bc38646bbc49793a11be0b903227a8c2c3fd9d80885"
+    },
+    {
+      "path": "apps/api/src/app.ts",
+      "sha256": "01b7727243e9829fde94afdb1d516869633ae637556b1af205c45ded3cac674b"
+    },
+    {
+      "path": "apps/api/src/config.ts",
+      "sha256": "38e7e47a4afb0c36b46e31f9fcd422b01bd77123cc77e898f830618e98e511e3"
+    },
+    {
+      "path": "apps/api/src/db.ts",
+      "sha256": "8c393387fb839d9543f3b69540837b0766877ef2d4052386865b547d0979bcc8"
+    },
+    {
+      "path": "apps/api/src/domain.ts",
+      "sha256": "ecfd64c5f0f7792addebaf83e67187b9045f74aee72e3238ea7efc92cef2d631"
+    },
+    {
+      "path": "apps/api/src/jobs/run.ts",
+      "sha256": "f1b7a8ac604b9977a0a12012efc896bae3eef7e27e36446addc34c27d189d799"
+    },
+    {
+      "path": "apps/api/src/jobs/worker.ts",
+      "sha256": "bfc8556389b67cade31e74bfd6e4e4c14375d1a2436d5894d76a65fd1835ea8d"
+    },
+    {
+      "path": "apps/api/src/modules/auth.ts",
+      "sha256": "b40443eaa4d0961dc8f7c5a9b39a77fa5a17a56ccd9bd206201dfe9e3f2da4be"
+    },
+    {
+      "path": "apps/api/src/modules/bookings.ts",
+      "sha256": "893d115b25a036d6dc61a122883a456c2dd5e2bfa3036ad7aaa47a090987ddaf"
+    },
+    {
+      "path": "apps/api/src/modules/inventory.ts",
+      "sha256": "3496862fbfbb3009a2eee7c8f56a3546d3a2ac38a726ac50ff968bf4c5d492e2"
+    },
+    {
+      "path": "apps/api/src/modules/metrics.ts",
+      "sha256": "df2b5ce936acf01de7e9b319b350541ebd3713d9162afcac130b14479f0a7e95"
+    },
+    {
+      "path": "apps/api/src/modules/operations.ts",
+      "sha256": "b2f1aab40c2cc477737650c6cd85a421703fda170c0f385548e52c1361a55669"
+    },
+    {
+      "path": "apps/api/src/modules/queries.ts",
+      "sha256": "3ad6532223a0bd23be7c84525e36dafaac83122eba257d6667cb272c9e50d194"
+    },
+    {
+      "path": "apps/api/src/modules/safety.ts",
+      "sha256": "23b246aff229afe37ec07c420e11543cd51d5957c04c615311793488875486fb"
+    },
+    {
+      "path": "apps/api/src/security.ts",
+      "sha256": "528b4bc7667ad5cd32ff69a034dbf0cf51876cefa2bca8a9ded3720c1ebc8dd7"
+    },
+    {
+      "path": "apps/api/src/server.ts",
+      "sha256": "89b1f2236ba1270d93eda1a789fd91e14ee1b15ff6a727ae54bce1bd974bfb8c"
+    },
+    {
+      "path": "apps/api/test/domain.test.ts",
+      "sha256": "258c004dee4eb4a46d006077df80d3026c24f734c5f042950c308630a14fc19d"
+    },
+    {
+      "path": "apps/api/test/integration.test.ts",
+      "sha256": "0ac82c42d304e9356e3c1026bfe93ea835b6b5791fa013874d3cb38d203fbc72"
+    },
+    {
+      "path": "apps/api/tsconfig.json",
+      "sha256": "b5c6a27f1aae620ed7253a95bd92c920eee3d862167f0b6ddc5d0603c7b92c29"
+    },
+    {
+      "path": "apps/web/e2e/setup.ts",
+      "sha256": "cff8399c7ebcb55a1abaac7027a91b7154b9312d305c7a960d7ff3ff26b412a9"
+    },
+    {
+      "path": "apps/web/e2e/workflows.spec.ts",
+      "sha256": "873188ab244ff0b148b52bdd895944c77889824e76b9150a7b1a5e0defc55d76"
+    },
+    {
+      "path": "apps/web/index.html",
+      "sha256": "33df2dcb0153a2830e6162f5fa713fb51e7b31009c9f03daa9d39d1b3815fc8e"
+    },
+    {
+      "path": "apps/web/package.json",
+      "sha256": "15588b7e843f19c7c23af6f38abed2672db4b6838a9db3e6f38558d10b196f45"
+    },
+    {
+      "path": "apps/web/src/app/auth.tsx",
+      "sha256": "960323c4707e2f6cada744bc19f6d155c884a543e202b7764e1263903a9bd34a"
+    },
+    {
+      "path": "apps/web/src/components/forms.tsx",
+      "sha256": "b3c8bc13725b4488858de942e17180cdcb9b53889a727ce6a099949b976f557b"
+    },
+    {
+      "path": "apps/web/src/components/table.tsx",
+      "sha256": "3394f4a66c8637fbf421f323bb176b73315c0a6c7e1b2f153c8b87a6846cb143"
+    },
+    {
+      "path": "apps/web/src/components/ui.tsx",
+      "sha256": "15209bd78c4c75f3686dcc59163670c38b4e875f064b3cfc20dd9759f50840f8"
+    },
+    {
+      "path": "apps/web/src/features/auth-pages.tsx",
+      "sha256": "2ba640f175f1fc3785f28467d1f12746f50ca1c1926c478e784e3b2cc2636eff"
+    },
+    {
+      "path": "apps/web/src/features/modules.ts",
+      "sha256": "998722cda456e6bed97ee82bae94d5b06c10dd846672f4ce2e3e426179f28d9d"
+    },
+    {
+      "path": "apps/web/src/features/pages.tsx",
+      "sha256": "caa557a0b4c3d687d779c4f0280524ef960199432f9c1244e63e9e0b4baa3649"
+    },
+    {
+      "path": "apps/web/src/features/resources.tsx",
+      "sha256": "047ac250b3a1361fc428edfe812990111d59018393fd8e2405afe9fbf591da66"
+    },
+    {
+      "path": "apps/web/src/lib/api.ts",
+      "sha256": "444b9871573a02f68c028244df83dd2ac3fe998bc4111c8a5154ea03a936bab1"
+    },
+    {
+      "path": "apps/web/src/main.tsx",
+      "sha256": "a45f58d4edcc5a2292490a15d5aaeab9cb9ebfa019ee80a5f8abbebb7b1ed0b7"
+    },
+    {
+      "path": "apps/web/src/styles.css",
+      "sha256": "d6d05fc8e64c30c9a522179bee0af6495d06ca2afae9bc1cda1ece0f14fd3b56"
+    },
+    {
+      "path": "apps/web/tsconfig.json",
+      "sha256": "9a09167aac59052d60a25096cab0529bd204cd7be3c67a5dd6c907c6aa163380"
+    },
+    {
+      "path": "apps/web/vite.config.ts",
+      "sha256": "9f9e8b83ab8a73407dc3dfc464e25d55199af3b012189a419a8670034f4d0945"
+    },
+    {
+      "path": "packages/shared/package.json",
+      "sha256": "81e9a84e50b4a063bb913ae8e79360ab4fe093fbfeeee2548a8392e650e45eff"
+    },
+    {
+      "path": "packages/shared/src/index.ts",
+      "sha256": "af87118171df61d885cf6ba89344ea5513eaa80398ac38573aad2e4648708a65"
+    },
+    {
+      "path": "scripts/database.mjs",
+      "sha256": "0afdc3e653e5c04a8adb9cc2da3c286a208c419ccfe9cbddad2ce9fa6ef19fae"
+    },
+    {
+      "path": "scripts/setup-local.mjs",
+      "sha256": "92680b709740764f8a65508b5d09c61b15e8a1a7a3382fe32db50a1b3f24884a"
+    },
+    {
+      "path": "package.json",
+      "sha256": "29bc1e52c1fc081a4525ac56dd999ae46976ebad645a5f4b368513dfb997fbf0"
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "9cdb1a0daf4d1e877518b5c74853b272c26e3578c56a1fcd92fae7b07720eae1"
+    },
+    {
+      "path": "prisma.config.ts",
+      "sha256": "faf8cdcd6c1ed1f7b742b0172cdb8b0d6db9515d035e6448592f6e4f12d174de"
+    },
+    {
+      "path": "playwright.config.ts",
+      "sha256": "af8184ac3e2019488101b46a008d59fd9d317b92296e4cdfd620af436fa6c838"
+    },
+    {
+      "path": "vitest.config.ts",
+      "sha256": "ef409d957847d29825d214a4a2157e77a56b8e5241fed981dd2240d3f52d2402"
+    },
+    {
+      "path": "eslint.config.js",
+      "sha256": "0d06f5f7eeb8de7e11b6234669f4dbc008113406937b1f668564d0fe85b4e824"
+    },
+    {
+      "path": "tsconfig.base.json",
+      "sha256": "37e731af24d9887f7ae586d7d1deb15098894b0ca9dbed59fb6256a2b88895fb"
+    },
+    {
+      "path": "compose.yaml",
+      "sha256": "664972b9c22326186f2154c900af6d5590a64a6c1f43cee84bb390f9523ee121"
+    },
+    {
+      "path": ".env.example",
+      "sha256": "72161df6f6c54efded29eae1910c0a4cb3b9dbbfa93d574b8d1828bdaa186b1e"
+    }
+  ]
+}

@@ -1,0 +1,1047 @@
+{
+  "config": {
+    "configFile": "D:\\git\\LabSphere\\playwright.config.ts",
+    "rootDir": "D:/git/LabSphere/apps/web/e2e",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": "D:\\git\\LabSphere\\apps\\web\\e2e\\setup.ts",
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "D:/git/LabSphere/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "desktop",
+        "name": "desktop",
+        "testDir": "D:/git/LabSphere/apps/web/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 150000
+      },
+      {
+        "outputDir": "D:/git/LabSphere/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "tablet",
+        "name": "tablet",
+        "testDir": "D:/git/LabSphere/apps/web/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 150000
+      },
+      {
+        "outputDir": "D:/git/LabSphere/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "mobile",
+        "name": "mobile",
+        "testDir": "D:/git/LabSphere/apps/web/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 150000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "docs/evidence/playwright.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "runAgents": "none",
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.58.2",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "screens.spec.ts",
+      "file": "screens.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "all 51 design screens, additional module routes, tabs and offline recovery",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 54136,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "login",
+                      "duration": 573
+                    },
+                    {
+                      "title": "register",
+                      "duration": 180
+                    },
+                    {
+                      "title": "verify-email",
+                      "duration": 317
+                    },
+                    {
+                      "title": "forgot-password",
+                      "duration": 184
+                    },
+                    {
+                      "title": "reset-password",
+                      "duration": 181
+                    },
+                    {
+                      "title": "invite-accept",
+                      "duration": 182
+                    },
+                    {
+                      "title": "select-lab",
+                      "duration": 450
+                    },
+                    {
+                      "title": "screens",
+                      "duration": 328
+                    },
+                    {
+                      "title": "dashboard",
+                      "duration": 604
+                    },
+                    {
+                      "title": "notifications",
+                      "duration": 381
+                    },
+                    {
+                      "title": "profile",
+                      "duration": 451
+                    },
+                    {
+                      "title": "security",
+                      "duration": 105
+                    },
+                    {
+                      "title": "chemicals",
+                      "duration": 904
+                    },
+                    {
+                      "title": "chemical-new",
+                      "duration": 195
+                    },
+                    {
+                      "title": "chemical-detail",
+                      "duration": 772
+                    },
+                    {
+                      "title": "container-detail",
+                      "duration": 459
+                    },
+                    {
+                      "title": "receive",
+                      "duration": 429
+                    },
+                    {
+                      "title": "withdrawals",
+                      "duration": 417
+                    },
+                    {
+                      "title": "withdrawal-detail",
+                      "duration": 182
+                    },
+                    {
+                      "title": "stocktakes",
+                      "duration": 750
+                    },
+                    {
+                      "title": "transfers",
+                      "duration": 594
+                    },
+                    {
+                      "title": "waste",
+                      "duration": 889
+                    },
+                    {
+                      "title": "equipment",
+                      "duration": 594
+                    },
+                    {
+                      "title": "equipment-detail",
+                      "duration": 753
+                    },
+                    {
+                      "title": "calendar",
+                      "duration": 465
+                    },
+                    {
+                      "title": "bookings",
+                      "duration": 650
+                    },
+                    {
+                      "title": "booking-new",
+                      "duration": 118
+                    },
+                    {
+                      "title": "booking-detail",
+                      "duration": 768
+                    },
+                    {
+                      "title": "issues",
+                      "duration": 588
+                    },
+                    {
+                      "title": "issue-new",
+                      "duration": 512
+                    },
+                    {
+                      "title": "issue-detail",
+                      "duration": 290
+                    },
+                    {
+                      "title": "maintenance",
+                      "duration": 343
+                    },
+                    {
+                      "title": "maintenance-detail",
+                      "duration": 189
+                    },
+                    {
+                      "title": "safety",
+                      "duration": 718
+                    },
+                    {
+                      "title": "documents",
+                      "duration": 607
+                    },
+                    {
+                      "title": "training",
+                      "duration": 876
+                    },
+                    {
+                      "title": "approvals",
+                      "duration": 646
+                    },
+                    {
+                      "title": "members",
+                      "duration": 910
+                    },
+                    {
+                      "title": "reports",
+                      "duration": 782
+                    },
+                    {
+                      "title": "activity",
+                      "duration": 902
+                    },
+                    {
+                      "title": "settings",
+                      "duration": 212
+                    },
+                    {
+                      "title": "platform",
+                      "duration": 606
+                    },
+                    {
+                      "title": "platform-labs",
+                      "duration": 241
+                    },
+                    {
+                      "title": "platform-lab-detail",
+                      "duration": 307
+                    },
+                    {
+                      "title": "platform-orgs",
+                      "duration": 272
+                    },
+                    {
+                      "title": "platform-users",
+                      "duration": 255
+                    },
+                    {
+                      "title": "platform-audit",
+                      "duration": 335
+                    },
+                    {
+                      "title": "platform-health",
+                      "duration": 230
+                    },
+                    {
+                      "title": "forbidden",
+                      "duration": 239
+                    },
+                    {
+                      "title": "not-found",
+                      "duration": 81
+                    },
+                    {
+                      "title": "offline",
+                      "duration": 81
+                    }
+                  ],
+                  "startTime": "2026-10-27T02:59:47.198Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2676ef668c5398eed988-c093b6299693973153a7",
+          "file": "screens.spec.ts",
+          "line": 8,
+          "column": 1
+        },
+        {
+          "title": "all 51 design screens, additional module routes, tabs and offline recovery",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "tablet",
+              "projectName": "tablet",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 54420,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "login",
+                      "duration": 489
+                    },
+                    {
+                      "title": "register",
+                      "duration": 263
+                    },
+                    {
+                      "title": "verify-email",
+                      "duration": 214
+                    },
+                    {
+                      "title": "forgot-password",
+                      "duration": 183
+                    },
+                    {
+                      "title": "reset-password",
+                      "duration": 166
+                    },
+                    {
+                      "title": "invite-accept",
+                      "duration": 167
+                    },
+                    {
+                      "title": "select-lab",
+                      "duration": 588
+                    },
+                    {
+                      "title": "screens",
+                      "duration": 194
+                    },
+                    {
+                      "title": "dashboard",
+                      "duration": 584
+                    },
+                    {
+                      "title": "notifications",
+                      "duration": 163
+                    },
+                    {
+                      "title": "profile",
+                      "duration": 465
+                    },
+                    {
+                      "title": "security",
+                      "duration": 186
+                    },
+                    {
+                      "title": "chemicals",
+                      "duration": 459
+                    },
+                    {
+                      "title": "chemical-new",
+                      "duration": 190
+                    },
+                    {
+                      "title": "chemical-detail",
+                      "duration": 731
+                    },
+                    {
+                      "title": "container-detail",
+                      "duration": 431
+                    },
+                    {
+                      "title": "receive",
+                      "duration": 466
+                    },
+                    {
+                      "title": "withdrawals",
+                      "duration": 348
+                    },
+                    {
+                      "title": "withdrawal-detail",
+                      "duration": 185
+                    },
+                    {
+                      "title": "stocktakes",
+                      "duration": 443
+                    },
+                    {
+                      "title": "transfers",
+                      "duration": 608
+                    },
+                    {
+                      "title": "waste",
+                      "duration": 581
+                    },
+                    {
+                      "title": "equipment",
+                      "duration": 867
+                    },
+                    {
+                      "title": "equipment-detail",
+                      "duration": 450
+                    },
+                    {
+                      "title": "calendar",
+                      "duration": 908
+                    },
+                    {
+                      "title": "bookings",
+                      "duration": 600
+                    },
+                    {
+                      "title": "booking-new",
+                      "duration": 70
+                    },
+                    {
+                      "title": "booking-detail",
+                      "duration": 716
+                    },
+                    {
+                      "title": "issues",
+                      "duration": 562
+                    },
+                    {
+                      "title": "issue-new",
+                      "duration": 486
+                    },
+                    {
+                      "title": "issue-detail",
+                      "duration": 300
+                    },
+                    {
+                      "title": "maintenance",
+                      "duration": 561
+                    },
+                    {
+                      "title": "maintenance-detail",
+                      "duration": 422
+                    },
+                    {
+                      "title": "safety",
+                      "duration": 905
+                    },
+                    {
+                      "title": "documents",
+                      "duration": 581
+                    },
+                    {
+                      "title": "training",
+                      "duration": 880
+                    },
+                    {
+                      "title": "approvals",
+                      "duration": 481
+                    },
+                    {
+                      "title": "members",
+                      "duration": 875
+                    },
+                    {
+                      "title": "reports",
+                      "duration": 687
+                    },
+                    {
+                      "title": "activity",
+                      "duration": 894
+                    },
+                    {
+                      "title": "settings",
+                      "duration": 192
+                    },
+                    {
+                      "title": "platform",
+                      "duration": 585
+                    },
+                    {
+                      "title": "platform-labs",
+                      "duration": 249
+                    },
+                    {
+                      "title": "platform-lab-detail",
+                      "duration": 312
+                    },
+                    {
+                      "title": "platform-orgs",
+                      "duration": 250
+                    },
+                    {
+                      "title": "platform-users",
+                      "duration": 355
+                    },
+                    {
+                      "title": "platform-audit",
+                      "duration": 213
+                    },
+                    {
+                      "title": "platform-health",
+                      "duration": 288
+                    },
+                    {
+                      "title": "forbidden",
+                      "duration": 186
+                    },
+                    {
+                      "title": "not-found",
+                      "duration": 64
+                    },
+                    {
+                      "title": "offline",
+                      "duration": 169
+                    }
+                  ],
+                  "startTime": "2026-10-27T03:01:04.789Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2676ef668c5398eed988-e48e997739b6b8ec1d3d",
+          "file": "screens.spec.ts",
+          "line": 8,
+          "column": 1
+        },
+        {
+          "title": "all 51 design screens, additional module routes, tabs and offline recovery",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 53451,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "steps": [
+                    {
+                      "title": "login",
+                      "duration": 445
+                    },
+                    {
+                      "title": "register",
+                      "duration": 285
+                    },
+                    {
+                      "title": "verify-email",
+                      "duration": 197
+                    },
+                    {
+                      "title": "forgot-password",
+                      "duration": 167
+                    },
+                    {
+                      "title": "reset-password",
+                      "duration": 165
+                    },
+                    {
+                      "title": "invite-accept",
+                      "duration": 149
+                    },
+                    {
+                      "title": "select-lab",
+                      "duration": 582
+                    },
+                    {
+                      "title": "screens",
+                      "duration": 189
+                    },
+                    {
+                      "title": "dashboard",
+                      "duration": 603
+                    },
+                    {
+                      "title": "notifications",
+                      "duration": 157
+                    },
+                    {
+                      "title": "profile",
+                      "duration": 468
+                    },
+                    {
+                      "title": "security",
+                      "duration": 207
+                    },
+                    {
+                      "title": "chemicals",
+                      "duration": 463
+                    },
+                    {
+                      "title": "chemical-new",
+                      "duration": 183
+                    },
+                    {
+                      "title": "chemical-detail",
+                      "duration": 732
+                    },
+                    {
+                      "title": "container-detail",
+                      "duration": 450
+                    },
+                    {
+                      "title": "receive",
+                      "duration": 496
+                    },
+                    {
+                      "title": "withdrawals",
+                      "duration": 313
+                    },
+                    {
+                      "title": "withdrawal-detail",
+                      "duration": 186
+                    },
+                    {
+                      "title": "stocktakes",
+                      "duration": 456
+                    },
+                    {
+                      "title": "transfers",
+                      "duration": 582
+                    },
+                    {
+                      "title": "waste",
+                      "duration": 580
+                    },
+                    {
+                      "title": "equipment",
+                      "duration": 889
+                    },
+                    {
+                      "title": "equipment-detail",
+                      "duration": 427
+                    },
+                    {
+                      "title": "calendar",
+                      "duration": 939
+                    },
+                    {
+                      "title": "bookings",
+                      "duration": 572
+                    },
+                    {
+                      "title": "booking-new",
+                      "duration": 399
+                    },
+                    {
+                      "title": "booking-detail",
+                      "duration": 387
+                    },
+                    {
+                      "title": "issues",
+                      "duration": 314
+                    },
+                    {
+                      "title": "issue-new",
+                      "duration": 181
+                    },
+                    {
+                      "title": "issue-detail",
+                      "duration": 331
+                    },
+                    {
+                      "title": "maintenance",
+                      "duration": 419
+                    },
+                    {
+                      "title": "maintenance-detail",
+                      "duration": 449
+                    },
+                    {
+                      "title": "safety",
+                      "duration": 222
+                    },
+                    {
+                      "title": "documents",
+                      "duration": 516
+                    },
+                    {
+                      "title": "training",
+                      "duration": 427
+                    },
+                    {
+                      "title": "approvals",
+                      "duration": 772
+                    },
+                    {
+                      "title": "members",
+                      "duration": 557
+                    },
+                    {
+                      "title": "reports",
+                      "duration": 902
+                    },
+                    {
+                      "title": "activity",
+                      "duration": 576
+                    },
+                    {
+                      "title": "settings",
+                      "duration": 463
+                    },
+                    {
+                      "title": "platform",
+                      "duration": 336
+                    },
+                    {
+                      "title": "platform-labs",
+                      "duration": 257
+                    },
+                    {
+                      "title": "platform-lab-detail",
+                      "duration": 309
+                    },
+                    {
+                      "title": "platform-orgs",
+                      "duration": 235
+                    },
+                    {
+                      "title": "platform-users",
+                      "duration": 373
+                    },
+                    {
+                      "title": "platform-audit",
+                      "duration": 206
+                    },
+                    {
+                      "title": "platform-health",
+                      "duration": 295
+                    },
+                    {
+                      "title": "forbidden",
+                      "duration": 184
+                    },
+                    {
+                      "title": "not-found",
+                      "duration": 69
+                    },
+                    {
+                      "title": "offline",
+                      "duration": 214
+                    }
+                  ],
+                  "startTime": "2026-10-27T03:02:23.106Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2676ef668c5398eed988-d871f2b8f0cee679c87c",
+          "file": "screens.spec.ts",
+          "line": 8,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "workflows.spec.ts",
+      "file": "workflows.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "inventory, bookings, safety, documents and account workflows",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 150000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 22540,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n    at D:\\git\\LabSphere\\apps\\web\\e2e\\workflows.spec.ts:14:1028",
+                    "location": {
+                      "file": "D:\\git\\LabSphere\\apps\\web\\e2e\\workflows.spec.ts",
+                      "column": 1028,
+                      "line": 14
+                    },
+                    "snippet": "  12 |  const equipmentName=`E2E equipment ${suffix}`;await page.goto(`${base}/equipment/new`);await page.getByLabel('รหัสเครื่องมือ',{exact:true}).fill(`EQ-${suffix}`);await page.getByLabel('ชื่อเครื่องมือ',{exact:true}).fill(equipmentName);await save(page);await page.getByLabel('ค้นหารายการ').fill(equipmentName);await page.getByRole('row').filter({hasText:equipmentName}).getByRole('link').click();const equipment=new URL(page.url()).pathname.split('/').pop()!;await page.getByRole('button',{name:'QR Label'}).click();await expect(page.getByRole('img',{name:'QR สำหรับเข้ารายละเอียดหลังเข้าสู่ระบบ'})).toBeVisible();await page.getByRole('button',{name:'ปิด',exact:true}).click();\n  13 |  await page.getByRole('link',{name:'จองเครื่องมือนี้',exact:true}).click();await expect(page.getByLabel('เครื่องมือ',{exact:true})).toHaveValue(equipment);const day=new Date(Date.now()+2*86400000).toISOString().slice(0,10);await page.getByLabel('เวลาเริ่มต้น').fill(`${day}T09:00`);await page.getByLabel('เวลาสิ้นสุด').fill(`${day}T10:00`);await page.getByLabel('วัตถุประสงค์',{exact:true}).fill(`E2E booking ${suffix}`);await save(page);await page.getByRole('row').filter({hasText:`E2E booking ${suffix}`}).getByRole('link').click();await page.getByRole('button',{name:'อนุมัติการจอง',exact:true}).click();await page.getByLabel('เหตุผล / บันทึก').fill('Approve browser booking');await save(page);await expect(page.getByText('อนุมัติแล้ว',{exact:true}).first()).toBeVisible();\n> 14 |  await page.goto(`${base}/equipment/issues/new`);await page.getByLabel('เครื่องมือ',{exact:true}).selectOption(equipment);await page.getByLabel('หัวข้อปัญหา').fill(`E2E fault ${suffix}`);await page.getByLabel('อาการ / รายละเอียด').fill('Fault report requiring safety stop');await page.getByLabel('หยุดใช้งานเพื่อความปลอดภัย').check();await page.getByLabel('แนบภาพปัญหาใหม่ (แชร์ภายในห้อง)').setInputFiles({name:'synthetic-issue.png',mimeType:'image/png',buffer:Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+/p9sAAAAASUVORK5CYII=','base64')});await save(page);await page.getByRole('row').filter({hasText:`E2E fault ${suffix}`}).getByRole('link').click();const issue=new URL(page.url()).pathname.split('/').pop()!;await page.getByRole('button',{name:/รูปภาพ \\/ หลักฐาน/}).click();await expect(page.getByRole('img',{name:`E2E fault ${suffix}`})).toBeVisible();expect(await page.getByRole('img',{name:`E2E fault ${suffix}`}).evaluate((img:HTMLImageElement)=>img.complete&&img.naturalWidth>0)).toBe(true);await page.goto(`${base}/equipment/${equipment}`);await expect(page.getByText('● ระงับใช้งาน',{exact:true}).first()).toBeVisible();\n     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ^\n  15 |  await page.goto(`${base}/maintenance/new`);await page.getByLabel('เครื่องมือ',{exact:true}).selectOption(equipment);await page.getByLabel('อ้างอิงการแจ้งเสีย').selectOption(issue);await save(page);await page.getByRole('row').filter({hasText:equipmentName}).getByRole('link').click();await page.getByRole('button',{name:'บันทึกผลซ่อม',exact:true}).click();await page.getByLabel('ผลการซ่อม / วิธีแก้ไข').fill('Replaced faulty component');await page.getByLabel('ผลการทดสอบ / ตรวจรับ').fill('Function test passed');await save(page);await expect(page.getByText('รอตรวจรับ',{exact:true}).first()).toBeVisible();await page.getByRole('button',{name:'ตรวจรับและคืนเครื่อง',exact:true}).click();await page.getByLabel('ผลการซ่อม / วิธีแก้ไข').fill('Verified replaced component');await page.getByLabel('ผลการทดสอบ / ตรวจรับ').fill('Independent function check passed');await save(page);await expect(page.getByText('ตรวจรับแล้ว',{exact:true}).first()).toBeVisible();\n  16 |  await page.goto(`${base}/documents/new`);await page.getByLabel('ประเภท',{exact:true}).selectOption('OTHER');await page.getByLabel('ชื่อเอกสาร').fill(`Test document ${suffix}`);await page.getByLabel('เวอร์ชัน').fill('1');await page.getByLabel('ไฟล์ (PDF, PNG, JPEG, TXT ไม่เกิน 10 MB)').setInputFiles({name:'fictional-test.txt',mimeType:'text/plain',buffer:Buffer.from('Synthetic QA document')});await save(page);await page.getByLabel('ค้นหารายการ').fill(`Test document ${suffix}`);await page.getByRole('row').filter({hasText:`Test document ${suffix}`}).getByRole('link').click();const download=page.waitForEvent('download');await page.getByRole('link',{name:'ดาวน์โหลด'}).click();expect((await download).suggestedFilename()).toBe('fictional-test.txt');\n  17 |  for(const route of ['dashboard','bookings/calendar','safety','approvals','training','members','activity','settings','reports','inventory/stocktakes','inventory/transfers','inventory/waste']){await page.goto(`${base}/${route}`);await expect(page.getByRole('heading',{level:1})).toBeVisible();await expect(page.getByRole('status',{name:'กำลังโหลด'})).toHaveCount(0);await expect(page.getByRole('alert')).toHaveCount(0);}"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "D:\\git\\LabSphere\\apps\\web\\e2e\\workflows.spec.ts",
+                        "column": 1028,
+                        "line": 14
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\n  12 |  const equipmentName=`E2E equipment ${suffix}`;await page.goto(`${base}/equipment/new`);await page.getByLabel('รหัสเครื่องมือ',{exact:true}).fill(`EQ-${suffix}`);await page.getByLabel('ชื่อเครื่องมือ',{exact:true}).fill(equipmentName);await save(page);await page.getByLabel('ค้นหารายการ').fill(equipmentName);await page.getByRole('row').filter({hasText:equipmentName}).getByRole('link').click();const equipment=new URL(page.url()).pathname.split('/').pop()!;await page.getByRole('button',{name:'QR Label'}).click();await expect(page.getByRole('img',{name:'QR สำหรับเข้ารายละเอียดหลังเข้าสู่ระบบ'})).toBeVisible();await page.getByRole('button',{name:'ปิด',exact:true}).click();\n  13 |  await page.getByRole('link',{name:'จองเครื่องมือนี้',exact:true}).click();await expect(page.getByLabel('เครื่องมือ',{exact:true})).toHaveValue(equipment);const day=new Date(Date.now()+2*86400000).toISOString().slice(0,10);await page.getByLabel('เวลาเริ่มต้น').fill(`${day}T09:00`);await page.getByLabel('เวลาสิ้นสุด').fill(`${day}T10:00`);await page.getByLabel('วัตถุประสงค์',{exact:true}).fill(`E2E booking ${suffix}`);await save(page);await page.getByRole('row').filter({hasText:`E2E booking ${suffix}`}).getByRole('link').click();await page.getByRole('button',{name:'อนุมัติการจอง',exact:true}).click();await page.getByLabel('เหตุผล / บันทึก').fill('Approve browser booking');await save(page);await expect(page.getByText('อนุมัติแล้ว',{exact:true}).first()).toBeVisible();\n> 14 |  await page.goto(`${base}/equipment/issues/new`);await page.getByLabel('เครื่องมือ',{exact:true}).selectOption(equipment);await page.getByLabel('หัวข้อปัญหา').fill(`E2E fault ${suffix}`);await page.getByLabel('อาการ / รายละเอียด').fill('Fault report requiring safety stop');await page.getByLabel('หยุดใช้งานเพื่อความปลอดภัย').check();await page.getByLabel('แนบภาพปัญหาใหม่ (แชร์ภายในห้อง)').setInputFiles({name:'synthetic-issue.png',mimeType:'image/png',buffer:Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+/p9sAAAAASUVORK5CYII=','base64')});await save(page);await page.getByRole('row').filter({hasText:`E2E fault ${suffix}`}).getByRole('link').click();const issue=new URL(page.url()).pathname.split('/').pop()!;await page.getByRole('button',{name:/รูปภาพ \\/ หลักฐาน/}).click();await expect(page.getByRole('img',{name:`E2E fault ${suffix}`})).toBeVisible();expect(await page.getByRole('img',{name:`E2E fault ${suffix}`}).evaluate((img:HTMLImageElement)=>img.complete&&img.naturalWidth>0)).toBe(true);await page.goto(`${base}/equipment/${equipment}`);await expect(page.getByText('● ระงับใช้งาน',{exact:true}).first()).toBeVisible();\n     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ^\n  15 |  await page.goto(`${base}/maintenance/new`);await page.getByLabel('เครื่องมือ',{exact:true}).selectOption(equipment);await page.getByLabel('อ้างอิงการแจ้งเสีย').selectOption(issue);await save(page);await page.getByRole('row').filter({hasText:equipmentName}).getByRole('link').click();await page.getByRole('button',{name:'บันทึกผลซ่อม',exact:true}).click();await page.getByLabel('ผลการซ่อม / วิธีแก้ไข').fill('Replaced faulty component');await page.getByLabel('ผลการทดสอบ / ตรวจรับ').fill('Function test passed');await save(page);await expect(page.getByText('รอตรวจรับ',{exact:true}).first()).toBeVisible();await page.getByRole('button',{name:'ตรวจรับและคืนเครื่อง',exact:true}).click();await page.getByLabel('ผลการซ่อม / วิธีแก้ไข').fill('Verified replaced component');await page.getByLabel('ผลการทดสอบ / ตรวจรับ').fill('Independent function check passed');await save(page);await expect(page.getByText('ตรวจรับแล้ว',{exact:true}).first()).toBeVisible();\n  16 |  await page.goto(`${base}/documents/new`);await page.getByLabel('ประเภท',{exact:true}).selectOption('OTHER');await page.getByLabel('ชื่อเอกสาร').fill(`Test document ${suffix}`);await page.getByLabel('เวอร์ชัน').fill('1');await page.getByLabel('ไฟล์ (PDF, PNG, JPEG, TXT ไม่เกิน 10 MB)').setInputFiles({name:'fictional-test.txt',mimeType:'text/plain',buffer:Buffer.from('Synthetic QA document')});await save(page);await page.getByLabel('ค้นหารายการ').fill(`Test document ${suffix}`);await page.getByRole('row').filter({hasText:`Test document ${suffix}`}).getByRole('link').click();const download=page.waitForEvent('download');await page.getByRole('link',{name:'ดาวน์โหลด'}).click();expect((await download).suggestedFilename()).toBe('fictional-test.txt');\n  17 |  for(const route of ['dashboard','bookings/calendar','safety','approvals','training','members','activity','settings','reports','inventory/stocktakes','inventory/transfers','inventory/waste']){await page.goto(`${base}/${route}`);await expect(page.getByRole('heading',{level:1})).toBeVisible();await expect(page.getByRole('status',{name:'กำลังโหลด'})).toHaveCount(0);await expect(page.getByRole('alert')).toHaveCount(0);}\n    at D:\\git\\LabSphere\\apps\\web\\e2e\\workflows.spec.ts:14:1028"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T03:00:41.449Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "D:\\git\\LabSphere\\test-results\\workflows-inventory-bookin-7c22f-ments-and-account-workflows-desktop\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "D:\\git\\LabSphere\\test-results\\workflows-inventory-bookin-7c22f-ments-and-account-workflows-desktop\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "D:\\git\\LabSphere\\apps\\web\\e2e\\workflows.spec.ts",
+                    "column": 1028,
+                    "line": 14
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "26aa48cee8983222f549-b207ed123bf90a285da0",
+          "file": "workflows.spec.ts",
+          "line": 8,
+          "column": 1
+        },
+        {
+          "title": "inventory, bookings, safety, documents and account workflows",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 150000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "tablet",
+              "projectName": "tablet",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 23046,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n    at D:\\git\\LabSphere\\apps\\web\\e2e\\workflows.spec.ts:14:1028",
+                    "location": {
+                      "file": "D:\\git\\LabSphere\\apps\\web\\e2e\\workflows.spec.ts",
+                      "column": 1028,
+                      "line": 14
+                    },
+                    "snippet": "  12 |  const equipmentName=`E2E equipment ${suffix}`;await page.goto(`${base}/equipment/new`);await page.getByLabel('รหัสเครื่องมือ',{exact:true}).fill(`EQ-${suffix}`);await page.getByLabel('ชื่อเครื่องมือ',{exact:true}).fill(equipmentName);await save(page);await page.getByLabel('ค้นหารายการ').fill(equipmentName);await page.getByRole('row').filter({hasText:equipmentName}).getByRole('link').click();const equipment=new URL(page.url()).pathname.split('/').pop()!;await page.getByRole('button',{name:'QR Label'}).click();await expect(page.getByRole('img',{name:'QR สำหรับเข้ารายละเอียดหลังเข้าสู่ระบบ'})).toBeVisible();await page.getByRole('button',{name:'ปิด',exact:true}).click();\n  13 |  await page.getByRole('link',{name:'จองเครื่องมือนี้',exact:true}).click();await expect(page.getByLabel('เครื่องมือ',{exact:true})).toHaveValue(equipment);const day=new Date(Date.now()+2*86400000).toISOString().slice(0,10);await page.getByLabel('เวลาเริ่มต้น').fill(`${day}T09:00`);await page.getByLabel('เวลาสิ้นสุด').fill(`${day}T10:00`);await page.getByLabel('วัตถุประสงค์',{exact:true}).fill(`E2E booking ${suffix}`);await save(page);await page.getByRole('row').filter({hasText:`E2E booking ${suffix}`}).getByRole('link').click();await page.getByRole('button',{name:'อนุมัติการจอง',exact:true}).click();await page.getByLabel('เหตุผล / บันทึก').fill('Approve browser booking');await save(page);await expect(page.getByText('อนุมัติแล้ว',{exact:true}).first()).toBeVisible();\n> 14 |  await page.goto(`${base}/equipment/issues/new`);await page.getByLabel('เครื่องมือ',{exact:true}).selectOption(equipment);await page.getByLabel('หัวข้อปัญหา').fill(`E2E fault ${suffix}`);await page.getByLabel('อาการ / รายละเอียด').fill('Fault report requiring safety stop');await page.getByLabel('หยุดใช้งานเพื่อความปลอดภัย').check();await page.getByLabel('แนบภาพปัญหาใหม่ (แชร์ภายในห้อง)').setInputFiles({name:'synthetic-issue.png',mimeType:'image/png',buffer:Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+/p9sAAAAASUVORK5CYII=','base64')});await save(page);await page.getByRole('row').filter({hasText:`E2E fault ${suffix}`}).getByRole('link').click();const issue=new URL(page.url()).pathname.split('/').pop()!;await page.getByRole('button',{name:/รูปภาพ \\/ หลักฐาน/}).click();await expect(page.getByRole('img',{name:`E2E fault ${suffix}`})).toBeVisible();expect(await page.getByRole('img',{name:`E2E fault ${suffix}`}).evaluate((img:HTMLImageElement)=>img.complete&&img.naturalWidth>0)).toBe(true);await page.goto(`${base}/equipment/${equipment}`);await expect(page.getByText('● ระงับใช้งาน',{exact:true}).first()).toBeVisible();\n     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ^\n  15 |  await page.goto(`${base}/maintenance/new`);await page.getByLabel('เครื่องมือ',{exact:true}).selectOption(equipment);await page.getByLabel('อ้างอิงการแจ้งเสีย').selectOption(issue);await save(page);await page.getByRole('row').filter({hasText:equipmentName}).getByRole('link').click();await page.getByRole('button',{name:'บันทึกผลซ่อม',exact:true}).click();await page.getByLabel('ผลการซ่อม / วิธีแก้ไข').fill('Replaced faulty component');await page.getByLabel('ผลการทดสอบ / ตรวจรับ').fill('Function test passed');await save(page);await expect(page.getByText('รอตรวจรับ',{exact:true}).first()).toBeVisible();await page.getByRole('button',{name:'ตรวจรับและคืนเครื่อง',exact:true}).click();await page.getByLabel('ผลการซ่อม / วิธีแก้ไข').fill('Verified replaced component');await page.getByLabel('ผลการทดสอบ / ตรวจรับ').fill('Independent function check passed');await save(page);await expect(page.getByText('ตรวจรับแล้ว',{exact:true}).first()).toBeVisible();\n  16 |  await page.goto(`${base}/documents/new`);await page.getByLabel('ประเภท',{exact:true}).selectOption('OTHER');await page.getByLabel('ชื่อเอกสาร').fill(`Test document ${suffix}`);await page.getByLabel('เวอร์ชัน').fill('1');await page.getByLabel('ไฟล์ (PDF, PNG, JPEG, TXT ไม่เกิน 10 MB)').setInputFiles({name:'fictional-test.txt',mimeType:'text/plain',buffer:Buffer.from('Synthetic QA document')});await save(page);await page.getByLabel('ค้นหารายการ').fill(`Test document ${suffix}`);await page.getByRole('row').filter({hasText:`Test document ${suffix}`}).getByRole('link').click();const download=page.waitForEvent('download');await page.getByRole('link',{name:'ดาวน์โหลด'}).click();expect((await download).suggestedFilename()).toBe('fictional-test.txt');\n  17 |  for(const route of ['dashboard','bookings/calendar','safety','approvals','training','members','activity','settings','reports','inventory/stocktakes','inventory/transfers','inventory/waste']){await page.goto(`${base}/${route}`);await expect(page.getByRole('heading',{level:1})).toBeVisible();await expect(page.getByRole('status',{name:'กำลังโหลด'})).toHaveCount(0);await expect(page.getByRole('alert')).toHaveCount(0);}"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "D:\\git\\LabSphere\\apps\\web\\e2e\\workflows.spec.ts",
+                        "column": 1028,
+                        "line": 14
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\n  12 |  const equipmentName=`E2E equipment ${suffix}`;await page.goto(`${base}/equipment/new`);await page.getByLabel('รหัสเครื่องมือ',{exact:true}).fill(`EQ-${suffix}`);await page.getByLabel('ชื่อเครื่องมือ',{exact:true}).fill(equipmentName);await save(page);await page.getByLabel('ค้นหารายการ').fill(equipmentName);await page.getByRole('row').filter({hasText:equipmentName}).getByRole('link').click();const equipment=new URL(page.url()).pathname.split('/').pop()!;await page.getByRole('button',{name:'QR Label'}).click();await expect(page.getByRole('img',{name:'QR สำหรับเข้ารายละเอียดหลังเข้าสู่ระบบ'})).toBeVisible();await page.getByRole('button',{name:'ปิด',exact:true}).click();\n  13 |  await page.getByRole('link',{name:'จองเครื่องมือนี้',exact:true}).click();await expect(page.getByLabel('เครื่องมือ',{exact:true})).toHaveValue(equipment);const day=new Date(Date.now()+2*86400000).toISOString().slice(0,10);await page.getByLabel('เวลาเริ่มต้น').fill(`${day}T09:00`);await page.getByLabel('เวลาสิ้นสุด').fill(`${day}T10:00`);await page.getByLabel('วัตถุประสงค์',{exact:true}).fill(`E2E booking ${suffix}`);await save(page);await page.getByRole('row').filter({hasText:`E2E booking ${suffix}`}).getByRole('link').click();await page.getByRole('button',{name:'อนุมัติการจอง',exact:true}).click();await page.getByLabel('เหตุผล / บันทึก').fill('Approve browser booking');await save(page);await expect(page.getByText('อนุมัติแล้ว',{exact:true}).first()).toBeVisible();\n> 14 |  await page.goto(`${base}/equipment/issues/new`);await page.getByLabel('เครื่องมือ',{exact:true}).selectOption(equipment);await page.getByLabel('หัวข้อปัญหา').fill(`E2E fault ${suffix}`);await page.getByLabel('อาการ / รายละเอียด').fill('Fault report requiring safety stop');await page.getByLabel('หยุดใช้งานเพื่อความปลอดภัย').check();await page.getByLabel('แนบภาพปัญหาใหม่ (แชร์ภายในห้อง)').setInputFiles({name:'synthetic-issue.png',mimeType:'image/png',buffer:Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+/p9sAAAAASUVORK5CYII=','base64')});await save(page);await page.getByRole('row').filter({hasText:`E2E fault ${suffix}`}).getByRole('link').click();const issue=new URL(page.url()).pathname.split('/').pop()!;await page.getByRole('button',{name:/รูปภาพ \\/ หลักฐาน/}).click();await expect(page.getByRole('img',{name:`E2E fault ${suffix}`})).toBeVisible();expect(await page.getByRole('img',{name:`E2E fault ${suffix}`}).evaluate((img:HTMLImageElement)=>img.complete&&img.naturalWidth>0)).toBe(true);await page.goto(`${base}/equipment/${equipment}`);await expect(page.getByText('● ระงับใช้งาน',{exact:true}).first()).toBeVisible();\n     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ^\n  15 |  await page.goto(`${base}/maintenance/new`);await page.getByLabel('เครื่องมือ',{exact:true}).selectOption(equipment);await page.getByLabel('อ้างอิงการแจ้งเสีย').selectOption(issue);await save(page);await page.getByRole('row').filter({hasText:equipmentName}).getByRole('link').click();await page.getByRole('button',{name:'บันทึกผลซ่อม',exact:true}).click();await page.getByLabel('ผลการซ่อม / วิธีแก้ไข').fill('Replaced faulty component');await page.getByLabel('ผลการทดสอบ / ตรวจรับ').fill('Function test passed');await save(page);await expect(page.getByText('รอตรวจรับ',{exact:true}).first()).toBeVisible();await page.getByRole('button',{name:'ตรวจรับและคืนเครื่อง',exact:true}).click();await page.getByLabel('ผลการซ่อม / วิธีแก้ไข').fill('Verified replaced component');await page.getByLabel('ผลการทดสอบ / ตรวจรับ').fill('Independent function check passed');await save(page);await expect(page.getByText('ตรวจรับแล้ว',{exact:true}).first()).toBeVisible();\n  16 |  await page.goto(`${base}/documents/new`);await page.getByLabel('ประเภท',{exact:true}).selectOption('OTHER');await page.getByLabel('ชื่อเอกสาร').fill(`Test document ${suffix}`);await page.getByLabel('เวอร์ชัน').fill('1');await page.getByLabel('ไฟล์ (PDF, PNG, JPEG, TXT ไม่เกิน 10 MB)').setInputFiles({name:'fictional-test.txt',mimeType:'text/plain',buffer:Buffer.from('Synthetic QA document')});await save(page);await page.getByLabel('ค้นหารายการ').fill(`Test document ${suffix}`);await page.getByRole('row').filter({hasText:`Test document ${suffix}`}).getByRole('link').click();const download=page.waitForEvent('download');await page.getByRole('link',{name:'ดาวน์โหลด'}).click();expect((await download).suggestedFilename()).toBe('fictional-test.txt');\n  17 |  for(const route of ['dashboard','bookings/calendar','safety','approvals','training','members','activity','settings','reports','inventory/stocktakes','inventory/transfers','inventory/waste']){await page.goto(`${base}/${route}`);await expect(page.getByRole('heading',{level:1})).toBeVisible();await expect(page.getByRole('status',{name:'กำลังโหลด'})).toHaveCount(0);await expect(page.getByRole('alert')).toHaveCount(0);}\n    at D:\\git\\LabSphere\\apps\\web\\e2e\\workflows.spec.ts:14:1028"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T03:01:59.325Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "D:\\git\\LabSphere\\test-results\\workflows-inventory-bookin-7c22f-ments-and-account-workflows-tablet\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "D:\\git\\LabSphere\\test-results\\workflows-inventory-bookin-7c22f-ments-and-account-workflows-tablet\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "D:\\git\\LabSphere\\apps\\web\\e2e\\workflows.spec.ts",
+                    "column": 1028,
+                    "line": 14
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "26aa48cee8983222f549-a9302d4ac2eb352fee53",
+          "file": "workflows.spec.ts",
+          "line": 8,
+          "column": 1
+        },
+        {
+          "title": "inventory, bookings, safety, documents and account workflows",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 150000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 22154,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n    at D:\\git\\LabSphere\\apps\\web\\e2e\\workflows.spec.ts:14:1028",
+                    "location": {
+                      "file": "D:\\git\\LabSphere\\apps\\web\\e2e\\workflows.spec.ts",
+                      "column": 1028,
+                      "line": 14
+                    },
+                    "snippet": "  12 |  const equipmentName=`E2E equipment ${suffix}`;await page.goto(`${base}/equipment/new`);await page.getByLabel('รหัสเครื่องมือ',{exact:true}).fill(`EQ-${suffix}`);await page.getByLabel('ชื่อเครื่องมือ',{exact:true}).fill(equipmentName);await save(page);await page.getByLabel('ค้นหารายการ').fill(equipmentName);await page.getByRole('row').filter({hasText:equipmentName}).getByRole('link').click();const equipment=new URL(page.url()).pathname.split('/').pop()!;await page.getByRole('button',{name:'QR Label'}).click();await expect(page.getByRole('img',{name:'QR สำหรับเข้ารายละเอียดหลังเข้าสู่ระบบ'})).toBeVisible();await page.getByRole('button',{name:'ปิด',exact:true}).click();\n  13 |  await page.getByRole('link',{name:'จองเครื่องมือนี้',exact:true}).click();await expect(page.getByLabel('เครื่องมือ',{exact:true})).toHaveValue(equipment);const day=new Date(Date.now()+2*86400000).toISOString().slice(0,10);await page.getByLabel('เวลาเริ่มต้น').fill(`${day}T09:00`);await page.getByLabel('เวลาสิ้นสุด').fill(`${day}T10:00`);await page.getByLabel('วัตถุประสงค์',{exact:true}).fill(`E2E booking ${suffix}`);await save(page);await page.getByRole('row').filter({hasText:`E2E booking ${suffix}`}).getByRole('link').click();await page.getByRole('button',{name:'อนุมัติการจอง',exact:true}).click();await page.getByLabel('เหตุผล / บันทึก').fill('Approve browser booking');await save(page);await expect(page.getByText('อนุมัติแล้ว',{exact:true}).first()).toBeVisible();\n> 14 |  await page.goto(`${base}/equipment/issues/new`);await page.getByLabel('เครื่องมือ',{exact:true}).selectOption(equipment);await page.getByLabel('หัวข้อปัญหา').fill(`E2E fault ${suffix}`);await page.getByLabel('อาการ / รายละเอียด').fill('Fault report requiring safety stop');await page.getByLabel('หยุดใช้งานเพื่อความปลอดภัย').check();await page.getByLabel('แนบภาพปัญหาใหม่ (แชร์ภายในห้อง)').setInputFiles({name:'synthetic-issue.png',mimeType:'image/png',buffer:Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+/p9sAAAAASUVORK5CYII=','base64')});await save(page);await page.getByRole('row').filter({hasText:`E2E fault ${suffix}`}).getByRole('link').click();const issue=new URL(page.url()).pathname.split('/').pop()!;await page.getByRole('button',{name:/รูปภาพ \\/ หลักฐาน/}).click();await expect(page.getByRole('img',{name:`E2E fault ${suffix}`})).toBeVisible();expect(await page.getByRole('img',{name:`E2E fault ${suffix}`}).evaluate((img:HTMLImageElement)=>img.complete&&img.naturalWidth>0)).toBe(true);await page.goto(`${base}/equipment/${equipment}`);await expect(page.getByText('● ระงับใช้งาน',{exact:true}).first()).toBeVisible();\n     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ^\n  15 |  await page.goto(`${base}/maintenance/new`);await page.getByLabel('เครื่องมือ',{exact:true}).selectOption(equipment);await page.getByLabel('อ้างอิงการแจ้งเสีย').selectOption(issue);await save(page);await page.getByRole('row').filter({hasText:equipmentName}).getByRole('link').click();await page.getByRole('button',{name:'บันทึกผลซ่อม',exact:true}).click();await page.getByLabel('ผลการซ่อม / วิธีแก้ไข').fill('Replaced faulty component');await page.getByLabel('ผลการทดสอบ / ตรวจรับ').fill('Function test passed');await save(page);await expect(page.getByText('รอตรวจรับ',{exact:true}).first()).toBeVisible();await page.getByRole('button',{name:'ตรวจรับและคืนเครื่อง',exact:true}).click();await page.getByLabel('ผลการซ่อม / วิธีแก้ไข').fill('Verified replaced component');await page.getByLabel('ผลการทดสอบ / ตรวจรับ').fill('Independent function check passed');await save(page);await expect(page.getByText('ตรวจรับแล้ว',{exact:true}).first()).toBeVisible();\n  16 |  await page.goto(`${base}/documents/new`);await page.getByLabel('ประเภท',{exact:true}).selectOption('OTHER');await page.getByLabel('ชื่อเอกสาร').fill(`Test document ${suffix}`);await page.getByLabel('เวอร์ชัน').fill('1');await page.getByLabel('ไฟล์ (PDF, PNG, JPEG, TXT ไม่เกิน 10 MB)').setInputFiles({name:'fictional-test.txt',mimeType:'text/plain',buffer:Buffer.from('Synthetic QA document')});await save(page);await page.getByLabel('ค้นหารายการ').fill(`Test document ${suffix}`);await page.getByRole('row').filter({hasText:`Test document ${suffix}`}).getByRole('link').click();const download=page.waitForEvent('download');await page.getByRole('link',{name:'ดาวน์โหลด'}).click();expect((await download).suggestedFilename()).toBe('fictional-test.txt');\n  17 |  for(const route of ['dashboard','bookings/calendar','safety','approvals','training','members','activity','settings','reports','inventory/stocktakes','inventory/transfers','inventory/waste']){await page.goto(`${base}/${route}`);await expect(page.getByRole('heading',{level:1})).toBeVisible();await expect(page.getByRole('status',{name:'กำลังโหลด'})).toHaveCount(0);await expect(page.getByRole('alert')).toHaveCount(0);}"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "D:\\git\\LabSphere\\apps\\web\\e2e\\workflows.spec.ts",
+                        "column": 1028,
+                        "line": 14
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\n  12 |  const equipmentName=`E2E equipment ${suffix}`;await page.goto(`${base}/equipment/new`);await page.getByLabel('รหัสเครื่องมือ',{exact:true}).fill(`EQ-${suffix}`);await page.getByLabel('ชื่อเครื่องมือ',{exact:true}).fill(equipmentName);await save(page);await page.getByLabel('ค้นหารายการ').fill(equipmentName);await page.getByRole('row').filter({hasText:equipmentName}).getByRole('link').click();const equipment=new URL(page.url()).pathname.split('/').pop()!;await page.getByRole('button',{name:'QR Label'}).click();await expect(page.getByRole('img',{name:'QR สำหรับเข้ารายละเอียดหลังเข้าสู่ระบบ'})).toBeVisible();await page.getByRole('button',{name:'ปิด',exact:true}).click();\n  13 |  await page.getByRole('link',{name:'จองเครื่องมือนี้',exact:true}).click();await expect(page.getByLabel('เครื่องมือ',{exact:true})).toHaveValue(equipment);const day=new Date(Date.now()+2*86400000).toISOString().slice(0,10);await page.getByLabel('เวลาเริ่มต้น').fill(`${day}T09:00`);await page.getByLabel('เวลาสิ้นสุด').fill(`${day}T10:00`);await page.getByLabel('วัตถุประสงค์',{exact:true}).fill(`E2E booking ${suffix}`);await save(page);await page.getByRole('row').filter({hasText:`E2E booking ${suffix}`}).getByRole('link').click();await page.getByRole('button',{name:'อนุมัติการจอง',exact:true}).click();await page.getByLabel('เหตุผล / บันทึก').fill('Approve browser booking');await save(page);await expect(page.getByText('อนุมัติแล้ว',{exact:true}).first()).toBeVisible();\n> 14 |  await page.goto(`${base}/equipment/issues/new`);await page.getByLabel('เครื่องมือ',{exact:true}).selectOption(equipment);await page.getByLabel('หัวข้อปัญหา').fill(`E2E fault ${suffix}`);await page.getByLabel('อาการ / รายละเอียด').fill('Fault report requiring safety stop');await page.getByLabel('หยุดใช้งานเพื่อความปลอดภัย').check();await page.getByLabel('แนบภาพปัญหาใหม่ (แชร์ภายในห้อง)').setInputFiles({name:'synthetic-issue.png',mimeType:'image/png',buffer:Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+/p9sAAAAASUVORK5CYII=','base64')});await save(page);await page.getByRole('row').filter({hasText:`E2E fault ${suffix}`}).getByRole('link').click();const issue=new URL(page.url()).pathname.split('/').pop()!;await page.getByRole('button',{name:/รูปภาพ \\/ หลักฐาน/}).click();await expect(page.getByRole('img',{name:`E2E fault ${suffix}`})).toBeVisible();expect(await page.getByRole('img',{name:`E2E fault ${suffix}`}).evaluate((img:HTMLImageElement)=>img.complete&&img.naturalWidth>0)).toBe(true);await page.goto(`${base}/equipment/${equipment}`);await expect(page.getByText('● ระงับใช้งาน',{exact:true}).first()).toBeVisible();\n     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ^\n  15 |  await page.goto(`${base}/maintenance/new`);await page.getByLabel('เครื่องมือ',{exact:true}).selectOption(equipment);await page.getByLabel('อ้างอิงการแจ้งเสีย').selectOption(issue);await save(page);await page.getByRole('row').filter({hasText:equipmentName}).getByRole('link').click();await page.getByRole('button',{name:'บันทึกผลซ่อม',exact:true}).click();await page.getByLabel('ผลการซ่อม / วิธีแก้ไข').fill('Replaced faulty component');await page.getByLabel('ผลการทดสอบ / ตรวจรับ').fill('Function test passed');await save(page);await expect(page.getByText('รอตรวจรับ',{exact:true}).first()).toBeVisible();await page.getByRole('button',{name:'ตรวจรับและคืนเครื่อง',exact:true}).click();await page.getByLabel('ผลการซ่อม / วิธีแก้ไข').fill('Verified replaced component');await page.getByLabel('ผลการทดสอบ / ตรวจรับ').fill('Independent function check passed');await save(page);await expect(page.getByText('ตรวจรับแล้ว',{exact:true}).first()).toBeVisible();\n  16 |  await page.goto(`${base}/documents/new`);await page.getByLabel('ประเภท',{exact:true}).selectOption('OTHER');await page.getByLabel('ชื่อเอกสาร').fill(`Test document ${suffix}`);await page.getByLabel('เวอร์ชัน').fill('1');await page.getByLabel('ไฟล์ (PDF, PNG, JPEG, TXT ไม่เกิน 10 MB)').setInputFiles({name:'fictional-test.txt',mimeType:'text/plain',buffer:Buffer.from('Synthetic QA document')});await save(page);await page.getByLabel('ค้นหารายการ').fill(`Test document ${suffix}`);await page.getByRole('row').filter({hasText:`Test document ${suffix}`}).getByRole('link').click();const download=page.waitForEvent('download');await page.getByRole('link',{name:'ดาวน์โหลด'}).click();expect((await download).suggestedFilename()).toBe('fictional-test.txt');\n  17 |  for(const route of ['dashboard','bookings/calendar','safety','approvals','training','members','activity','settings','reports','inventory/stocktakes','inventory/transfers','inventory/waste']){await page.goto(`${base}/${route}`);await expect(page.getByRole('heading',{level:1})).toBeVisible();await expect(page.getByRole('status',{name:'กำลังโหลด'})).toHaveCount(0);await expect(page.getByRole('alert')).toHaveCount(0);}\n    at D:\\git\\LabSphere\\apps\\web\\e2e\\workflows.spec.ts:14:1028"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T03:03:16.656Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "D:\\git\\LabSphere\\test-results\\workflows-inventory-bookin-7c22f-ments-and-account-workflows-mobile\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "D:\\git\\LabSphere\\test-results\\workflows-inventory-bookin-7c22f-ments-and-account-workflows-mobile\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "D:\\git\\LabSphere\\apps\\web\\e2e\\workflows.spec.ts",
+                    "column": 1028,
+                    "line": 14
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "26aa48cee8983222f549-d660fa51aa9918562cdb",
+          "file": "workflows.spec.ts",
+          "line": 8,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-27T02:59:43.048Z",
+    "duration": 236052.02899999998,
+    "expected": 3,
+    "skipped": 0,
+    "unexpected": 3,
+    "flaky": 0
+  }
+}

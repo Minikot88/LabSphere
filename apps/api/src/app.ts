@@ -1,0 +1,24 @@
+import Fastify from 'fastify';
+import cookie from '@fastify/cookie';
+import cors from '@fastify/cors';
+import helmet from '@fastify/helmet';
+import rateLimit from '@fastify/rate-limit';
+import multipart from '@fastify/multipart';
+import swagger from '@fastify/swagger';
+import swaggerUi from '@fastify/swagger-ui';
+import {ZodError,z} from 'zod';
+import {Prisma} from './generated/prisma/client.js';
+import {cfg} from './config.js';
+import {db} from './db.js';
+import {AppError} from './domain.js';
+import {authRoutes,data} from './modules/auth.js';
+import {inventoryRoutes} from './modules/inventory.js';
+import {bookingRoutes} from './modules/bookings.js';
+import {operationRoutes} from './modules/operations.js';
+import {safetyRoutes} from './modules/safety.js';
+import {experienceRoutes} from './modules/experience.js';
+import {queryRoutes} from './modules/queries.js';
+export async function buildApp(){const app=Fastify({logger:process.env.NODE_ENV==='test'?false:{redact:['req.headers.cookie','req.headers.authorization','req.headers.x-csrf-token','body.password','body.token','body.code']},bodyLimit:11*1024*1024});await app.register(cookie);await app.register(cors,{origin:cfg.webUrl,credentials:true});await app.register(helmet,{contentSecurityPolicy:false});await app.register(rateLimit,{max:300,timeWindow:60000,keyGenerator:req=>req.ip+':'+req.routeOptions.url});await app.register(multipart,{limits:{fileSize:10*1024*1024,files:1}});await app.register(swagger,{openapi:{info:{title:'LabSphere Local API',version:'1.0.0',description:'Cookie session (HttpOnly), GET /auth/csrf then x-csrf-token on mutations. Every lab endpoint enforces active membership and module RBAC.'},servers:[{url:'http://localhost:3001'}],components:{securitySchemes:{cookieSession:{type:'apiKey',in:'cookie',name:'session'}}}}});await app.register(swaggerUi,{routePrefix:'/api/docs'});
+ app.setErrorHandler((error,req,reply)=>{if(error instanceof ZodError)return reply.code(422).send({code:'VALIDATION',message:'ข้อมูลไม่ถูกต้อง',details:error.issues,requestId:req.id});if(error instanceof AppError)return reply.code(error.status).send({code:error.code,message:error.message,details:error.details,requestId:req.id});if(error instanceof Prisma.PrismaClientKnownRequestError){const code=error.code==='P2002'?'DUPLICATE':error.code==='P2025'?'NOT_FOUND':'DATABASE_CONFLICT';return reply.code(error.code==='P2025'?404:409).send({code,message:'ข้อมูลขัดแย้งหรือมีรายการนี้แล้ว',requestId:req.id});}const status=(error as {statusCode?:number}).statusCode;if(status&&status<500)return reply.code(status).send({code:status===429?'RATE_LIMIT':'REQUEST_ERROR',message:status===429?'กรุณารอสักครู่ก่อนลองใหม่':'คำขอไม่ถูกต้อง',requestId:req.id});req.log.error(error);return reply.code(500).send({code:'INTERNAL_ERROR',message:'ระบบขัดข้อง กรุณาติดต่อผู้ดูแลพร้อม requestId',requestId:req.id});});
+ app.addHook('preValidation',async req=>{const p=req.params as Record<string,string>;if(p?.labId)z.uuid().parse(p.labId);if(p?.id)z.uuid().parse(p.id);});
+ app.setNotFoundHandler((req,reply)=>reply.code(404).send({code:'NOT_FOUND',message:'ไม่พบเส้นทาง',requestId:req.id}));app.get('/api/v1/health',async()=>{await db.$queryRaw`SELECT 1`;return data({status:'ok',database:'postgresql',timezone:'Asia/Bangkok'});});await authRoutes(app);await inventoryRoutes(app);await bookingRoutes(app);await operationRoutes(app);await queryRoutes(app);await experienceRoutes(app);await safetyRoutes(app);return app;}

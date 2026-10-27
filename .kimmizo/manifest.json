@@ -1,0 +1,21 @@
+{
+  "created_at": "2026-10-25T06:52:22Z",
+  "identity_policy": "agent name and agent_id are immutable",
+  "managed_files": [
+    "AGENTS.md",
+    ".codex/config.toml",
+    ".codex/agents/*.toml",
+    ".agents/skills/kimmizo-*/SKILL.md",
+    ".kimmizo/BOOT.md"
+  ],
+  "memory_policy": "project-local, git-ignored, no telemetry, no vector DB, no cross-project memory",
+  "model_policy": {
+    "secretary": "native_or_kimmizo_auto_each_message_with_manual_fallback",
+    "workers": "kimmizo_selects_automatically_from_live_host_catalog_per_task"
+  },
+  "project_id": "6176ddfa-d037-5193-9fb1-0d578a8337e2",
+  "schema_version": 1,
+  "setup_version": "1.0.0",
+  "source": "tongkungtk/kimmizo_setup",
+  "state": "prepared"
+}

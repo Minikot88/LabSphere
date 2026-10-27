@@ -1,0 +1,11 @@
+import {z} from 'zod';
+export const roles=['LAB_ADMIN','CHEMICAL_MANAGER','EQUIPMENT_MANAGER','SAFETY_OFFICER','MEMBER','VIEWER'] as const;
+export type Role=typeof roles[number];
+export const email=z.string().trim().toLowerCase().email();
+export const password=z.string().min(12).max(128);
+export const loginSchema=z.object({email,password:z.string().min(1),code:z.string().optional()});
+export const registrationSchema=z.object({email,password,name:z.string().trim().min(2).max(160),labId:z.uuid()});
+export const quantity=z.union([z.string(),z.number()]).transform(String).refine(v=>/^\d+(\.\d{1,6})?$/.test(v)&&!/^0(?:\.0+)?$/.test(v),'ปริมาณต้องมากกว่า 0 และมีทศนิยมไม่เกิน 6 ตำแหน่ง');
+export const nonnegative=z.union([z.string(),z.number()]).transform(String).refine(v=>/^\d+(\.\d{1,6})?$/.test(v),'ปริมาณไม่ถูกต้อง');
+export const note=z.string().trim().min(3).max(2000);
+export const id=z.uuid();
